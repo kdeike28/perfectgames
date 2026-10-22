@@ -1,1 +1,345 @@
-jfgsjkjaslkf
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PerfectGames Home</title>
+    <style>
+      :root {
+        --bg: #d9d9d9;
+        --panel: #efefef;
+        --ink: #111111;
+        --border: 3px solid #111;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 24px;
+      }
+
+      .page {
+        width: 100%;
+        max-width: 1280px;
+        min-height: 760px;
+        border: var(--border);
+        background: var(--panel);
+        position: relative;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 260px 1fr 220px;
+      }
+
+      .left-bar {
+        border-right: var(--border);
+      }
+
+      .logo-box,
+      .nav-box,
+      .content-box,
+      .hero-box,
+      .sticky-box,
+      .info-box,
+      .feature-box,
+      .footer-box {
+        border: 2px solid #111;
+        background: rgba(255,255,255,0.02);
+      }
+
+      .logo-box {
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(2.6rem, 3vw, 5rem);
+        font-weight: 700;
+        letter-spacing: -0.06em;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+      }
+
+      .nav-box {
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(1.15rem, 1.5vw, 1.7rem);
+        line-height: 1.25;
+        border-left: none;
+        border-right: none;
+      }
+
+      .top-row {
+        display: grid;
+        grid-template-columns: 1fr 2.8fr;
+        border-bottom: var(--border);
+      }
+
+      .info-box {
+        min-height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(1.05rem, 1.35vw, 1.5rem);
+        border-left: var(--border);
+        border-top: none;
+        border-right: none;
+        padding: 22px 20px;
+      }
+
+      .main-area {
+        grid-column: 2 / 4;
+      }
+
+      .nav-strip {
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(1.1rem, 1.45vw, 1.8rem);
+        border-bottom: var(--border);
+      }
+
+      .nav-strip.secondary {
+        min-height: 58px;
+      }
+
+      .body-area {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr 1.1fr;
+        min-height: 470px;
+      }
+
+      .main-column {
+        border-right: var(--border);
+      }
+
+      .hero-box {
+        height: 166px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(1.9rem, 2vw, 3.2rem);
+        font-weight: 700;
+        padding: 20px;
+      }
+
+      .content-box {
+        min-height: 300px;
+        border-left: none;
+        border-right: none;
+        border-top: var(--border);
+        padding: 18px 24px 26px;
+      }
+
+      .content-box h2 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 2vw, 3rem);
+        line-height: 1.1;
+        text-align: center;
+      }
+
+      .content-box p {
+        margin: 0 auto;
+        max-width: 560px;
+        font-size: clamp(1.1rem, 1.45vw, 2.2rem);
+        line-height: 1.2;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .sticky-box {
+        min-height: 166px;
+        font-size: clamp(1.1rem, 1.3vw, 1.6rem);
+        font-weight: 700;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 12px 18px;
+        border-top: none;
+        border-left: var(--border);
+        border-right: none;
+      }
+
+      .sticky-box ul {
+        margin: 0;
+        padding-left: 1.1em;
+        list-style: none;
+      }
+
+      .sticky-box li {
+        margin-bottom: 0.35em;
+        line-height: 1.1;
+      }
+
+      .side-panel {
+        display: flex;
+        flex-direction: column;
+        border-right: var(--border);
+      }
+
+      .side-box {
+        flex: 1;
+        border: none;
+        border-right: var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(1.2rem, 1.5vw, 2.1rem);
+        font-weight: 700;
+        line-height: 1.1;
+        padding: 18px;
+      }
+
+      .footer-box {
+        min-height: 90px;
+        border-top: var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(1.15rem, 1.35vw, 1.8rem);
+        line-height: 1.25;
+        padding: 18px 22px;
+      }
+
+      .label {
+        position: absolute;
+        color: var(--ink);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: center;
+        z-index: 0;
+      }
+
+      .label.left {
+        left: 20px;
+        bottom: -86px;
+      }
+
+      .label.right {
+        right: 14px;
+        bottom: -84px;
+      }
+
+      .page::after {
+        content: "";
+        position: absolute;
+        right: -18px;
+        bottom: -18px;
+        width: 34px;
+        height: 34px;
+        background: #d9d9d9;
+        border: 3px solid #111;
+      }
+
+      @media (max-width: 900px) {
+        .layout,
+        .body-area,
+        .top-row {
+          grid-template-columns: 1fr;
+        }
+
+        .left-bar,
+        .main-column,
+        .side-panel,
+        .sticky-box,
+        .info-box {
+          border-right: none;
+          border-left: none;
+        }
+
+        .nav-strip,
+        .footer-box,
+        .logo-box,
+        .nav-box,
+        .hero-box,
+        .content-box,
+        .sticky-box,
+        .side-box {
+          min-height: auto;
+          padding: 18px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="layout">
+        <aside class="left-bar">
+          <div class="logo-box">Logo</div>
+          <div class="nav-box">Primary<br />Navigation</div>
+          <div class="nav-box">Secondary<br />navigation if<br />needed</div>
+        </aside>
+
+        <div class="top-row">
+          <div class="info-box">
+            This area is for informational graphics which describe images what your site is about
+          </div>
+        </div>
+
+        <div class="main-area">
+          <div class="nav-strip">Primary navigation</div>
+          <div class="nav-strip secondary">Secondary navigation if needed</div>
+
+          <div class="body-area">
+            <div class="side-panel">
+              <div class="side-box">Body or<br />background<br />area</div>
+            </div>
+
+            <div class="main-column">
+              <div class="hero-box">Hero image at top</div>
+              <div class="content-box">
+                <h2>Main content area</h2>
+                <p>
+                  This area HAS to contain html text and images (ie not image text). Text should be around
+                  400 words and contain 5-7% keywords
+                </p>
+              </div>
+            </div>
+
+            <div class="side-panel">
+              <div class="sticky-box">
+                <ul>
+                  <li>Sticky content such as</li>
+                  <li>news items</li>
+                  <li>adverts</li>
+                  <li>offers</li>
+                  <li>general site info</li>
+                  <li>Social Networking icons</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-box">
+            Footer: Contains copyright info, current year, primary links, contact, privacy statement,
+            webmaster email address
+          </div>
+        </div>
+      </div>
+
+      <div class="label left">Body or<br />background<br />area</div>
+    </div>
+  </body>
+</html>
