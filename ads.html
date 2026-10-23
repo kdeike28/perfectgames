@@ -8,56 +8,28 @@
     :root { --ad-red: #e56568; --page: #fff; --gap: 16px; }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; }
-    body {
-      background: var(--page);
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 34px 24px;
-    }
+    body { background: var(--page); color: #fff; font-family: Arial, Helvetica, sans-serif; padding: 34px 24px; }
     .ad-layout { width: max-content; max-width: 100%; margin: 0 auto; }
     .banner-row { display: flex; justify-content: center; margin-bottom: 16px; }
-    .banner-image { display: block; width: 728px; height: 90px; object-fit: contain; }
-    .columns {
-      display: grid;
-      grid-template-columns: 160px 336px 300px;
-      gap: var(--gap);
-      align-items: start;
-    }
+    .banner-image { display: block; width: 728px; height: 90px; object-fit: fill; }
+    .columns { display: grid; grid-template-columns: 160px 336px 300px; gap: var(--gap); align-items: start; }
     .middle-column { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-    .ad-slot {
-      position: relative; display: flex; align-items: center; justify-content: center;
-      overflow: hidden; flex: none; background: var(--ad-red); color: #fff;
-      text-align: center; font-size: 32px; font-weight: 400; line-height: 1.15;
-      text-shadow: 0 1px 2px rgba(0,0,0,.12); isolation: isolate;
-    }
-    .ad-slot::before {
-      content: ""; position: absolute; inset: 0; z-index: -1;
-      background: linear-gradient(35deg, transparent 0 48%, rgba(165,65,69,.34) 48.2% 100%);
-    }
-    .ad-slot::after {
-      content: ""; position: absolute; inset: 0; z-index: -1;
-      background: linear-gradient(115deg, rgba(177,70,73,.25), transparent 55%);
-    }
+    .ad-slot { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; flex: none; background: var(--ad-red); color: #fff; text-align: center; font-size: 32px; font-weight: 400; line-height: 1.15; text-shadow: 0 1px 2px rgba(0,0,0,.12); isolation: isolate; }
+    .ad-slot::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(35deg, transparent 0 48%, rgba(165,65,69,.34) 48.2% 100%); }
+    .ad-slot::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, rgba(177,70,73,.25), transparent 55%); }
     .mobile-banner { width: 320px; height: 50px; }
     .medium-rectangle { width: 300px; height: 250px; }
     .large-rectangle { width: 336px; height: 280px; }
     .skyscraper { width: 160px; height: 600px; }
     .wide-skyscraper { width: 300px; height: 600px; }
-    @media (max-width: 900px) {
-      body { padding: 24px 16px; }
-      .ad-layout { width: 100%; overflow-x: auto; padding-bottom: 8px; }
-      .banner-row, .columns { width: 828px; }
-    }
-    @media (max-width: 520px) {
-      body { padding: 20px 12px; }
-      .ad-slot { font-size: 26px; }
-    }
+    @media (max-width: 900px) { body { padding: 24px 16px; } .ad-layout { width: 100%; overflow-x: auto; padding-bottom: 8px; } .banner-row, .columns { width: 828px; } }
+    @media (max-width: 520px) { body { padding: 20px 12px; } .ad-slot { font-size: 26px; } }
   </style>
 </head>
 <body>
   <main class="ad-layout" aria-label="Perfect Games advertising layout">
     <div class="banner-row">
-      <img class="banner-image" src="display-ads.svg" alt="Perfect Games 728 by 90 display advertisement" />
+      <img class="banner-image" src="Display%20Ads.png" alt="Perfect Games display advertisement" width="728" height="90" />
     </div>
     <section class="columns" aria-label="Advertisement placements">
       <div class="ad-slot skyscraper" aria-label="160 by 600 skyscraper advertisement">160<br />x600</div>
