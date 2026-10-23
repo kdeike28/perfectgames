@@ -3,44 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfect Games | Ad Layout</title>
+  <title>PerfectGames | Ads</title>
   <style>
-    :root { --ad-red: #e56568; --page: #fff; --gap: 16px; }
+    :root {
+      --bg: #e7e7e7; --panel: #ffffff; --ink: #111111; --muted: #4d4d4d;
+      --line: #d4d4d4; --accent: #d71920; --accent-dark: #a60d15;
+      --accent-soft: #f6dfe0; --shadow: 0 18px 42px rgba(17,17,17,.08);
+      --gap: 16px;
+    }
     * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body { background: var(--page); color: #fff; font-family: Arial, Helvetica, sans-serif; padding: 34px 24px; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: linear-gradient(180deg, #dadada 0%, var(--bg) 100%);
+      color: var(--ink); font-family: Arial, Helvetica, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page { max-width: 1280px; margin: 28px auto; background: var(--panel); border: 3px solid var(--ink); box-shadow: var(--shadow); }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 20px 32px; border-bottom: 3px solid var(--ink); background: #f7f7f7;
+    }
+    .brand { display: flex; align-items: center; gap: 16px; }
+    .logo-mark {
+      width: 54px; height: 54px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white; font-weight: 800; border: 3px solid var(--ink); border-radius: 12px;
+    }
+    .brand-name { font-size: clamp(1.6rem, 2vw, 2.3rem); font-weight: 800; letter-spacing: -.06em; }
+    .nav { display: flex; align-items: center; gap: 28px; font-weight: 700; flex-wrap: wrap; }
+    .nav a { position: relative; color: var(--ink); }
+    .nav a::after {
+      content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 3px;
+      background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .2s ease;
+    }
+    .nav a:hover::after { transform: scaleX(1); }
+    .top-action { padding: 12px 18px; border: 3px solid var(--ink); background: var(--ink); color: white; font-weight: 700; }
+    .ads-intro {
+      padding: 34px 32px 24px; border-bottom: 3px solid var(--ink);
+      background: linear-gradient(135deg, var(--accent-soft) 0%, #fff 100%);
+    }
+    .eyebrow {
+      display: inline-block; margin-bottom: 14px; padding: 8px 12px; background: #111; color: white;
+      font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700;
+    }
+    h1 { margin: 0 0 10px; font-size: clamp(2.3rem, 4vw, 3.8rem); line-height: .98; letter-spacing: -.07em; }
+    .lead { margin: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.55; }
+    .ads-content { padding: 32px; background: #fff; overflow-x: auto; }
     .ad-layout { width: max-content; max-width: 100%; margin: 0 auto; }
     .banner-row { display: flex; justify-content: center; margin-bottom: 16px; }
     .banner-image { display: block; width: 728px; height: 90px; object-fit: fill; }
     .columns { display: grid; grid-template-columns: 160px 336px 300px; gap: var(--gap); align-items: start; }
     .middle-column { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-    .ad-slot { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; flex: none; background: var(--ad-red); color: #fff; text-align: center; font-size: 32px; font-weight: 400; line-height: 1.15; text-shadow: 0 1px 2px rgba(0,0,0,.12); isolation: isolate; }
-    .ad-slot::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(35deg, transparent 0 48%, rgba(165,65,69,.34) 48.2% 100%); }
-    .ad-slot::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, rgba(177,70,73,.25), transparent 55%); }
+    .ad-slot {
+      position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
+      flex: none; background: #e56568; color: #fff; text-align: center; font-size: 32px;
+      font-weight: 400; line-height: 1.15; text-shadow: 0 1px 2px rgba(0,0,0,.12); isolation: isolate;
+    }
+    .ad-slot::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(35deg, transparent 0 48%, rgba(165,65,69,.34) 48.2% 100%);
+    }
+    .ad-slot::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(115deg, rgba(177,70,73,.25), transparent 55%);
+    }
     .mobile-banner { width: 320px; height: 50px; }
     .medium-rectangle { width: 300px; height: 250px; }
     .medium-rectangle-image { display: block; width: 300px; height: 250px; object-fit: fill; }
     .large-rectangle { width: 336px; height: 280px; }
     .skyscraper { width: 160px; height: 600px; }
     .wide-skyscraper { width: 300px; height: 600px; }
-    @media (max-width: 900px) { body { padding: 24px 16px; } .ad-layout { width: 100%; overflow-x: auto; padding-bottom: 8px; } .banner-row, .columns { width: 828px; } }
-    @media (max-width: 520px) { body { padding: 20px 12px; } .ad-slot { font-size: 26px; } }
+    footer {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      padding: 22px 32px; border-top: 3px solid var(--ink); background: #111; color: white; flex-wrap: wrap;
+    }
+    .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-weight: 700; }
+    @media (max-width: 940px) {
+      .topbar { flex-wrap: wrap; justify-content: center; }
+      .ads-content { padding: 24px 16px; }
+      .ad-layout { max-width: none; }
+    }
+    @media (max-width: 560px) {
+      .page { margin: 14px; }
+      .topbar, .ads-intro, footer { padding-left: 18px; padding-right: 18px; }
+      .nav { justify-content: center; gap: 18px; }
+      .ads-content { padding: 20px 12px; }
+      .ad-slot { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
-  <main class="ad-layout" aria-label="Perfect Games advertising layout">
-    <div class="banner-row">
-      <img class="banner-image" src="Display%20Ads.png" alt="Perfect Games display advertisement" width="728" height="90" />
-    </div>
-    <section class="columns" aria-label="Advertisement placements">
-      <div class="ad-slot skyscraper" aria-label="160 by 600 skyscraper advertisement">160<br />x600</div>
-      <div class="middle-column">
-        <div class="ad-slot mobile-banner" aria-label="320 by 50 mobile banner advertisement">320x50</div>
-        <div class="ad-slot medium-rectangle" aria-label="300 by 250 rectangle advertisement"><img class="medium-rectangle-image" src="Display%20Ads%20(1).png" alt="Perfect Games 300 by 250 display advertisement" width="300" height="250" /></div>
-        <div class="ad-slot large-rectangle" aria-label="336 by 280 large rectangle advertisement">336x280</div>
-      </div>
-      <div class="ad-slot wide-skyscraper" aria-label="300 by 600 wide skyscraper advertisement">300<br />x600</div>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="PerfectGames home">
+        <div class="logo-mark">PG</div>
+        <div class="brand-name">PerfectGames</div>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="ads.html" aria-current="page">Ads</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#community">Community</a>
+      </nav>
+      <a class="top-action" href="index.html">Book Now</a>
+    </header>
+
+    <section class="ads-intro">
+      <div class="eyebrow">PerfectGames Advertising</div>
+      <h1>Ad placements</h1>
+      <p class="lead">A preview of the display ad sizes and placements used across the PerfectGames experience.</p>
     </section>
-  </main>
+
+    <main class="ads-content">
+      <div class="ad-layout" aria-label="PerfectGames advertising layout">
+        <div class="banner-row">
+          <img class="banner-image" src="Display%20Ads.png" alt="Perfect Games display advertisement" width="728" height="90" />
+        </div>
+        <section class="columns" aria-label="Advertisement placements">
+          <div class="ad-slot skyscraper" aria-label="160 by 600 skyscraper advertisement">160<br />x600</div>
+          <div class="middle-column">
+            <div class="ad-slot mobile-banner" aria-label="320 by 50 mobile banner advertisement">320x50</div>
+            <div class="ad-slot medium-rectangle" aria-label="300 by 250 rectangle advertisement"><img class="medium-rectangle-image" src="Display%20Ads%20(1).png" alt="Perfect Games 300 by 250 display advertisement" width="300" height="250" /></div>
+            <div class="ad-slot large-rectangle" aria-label="336 by 280 large rectangle advertisement">336x280</div>
+          </div>
+          <div class="ad-slot wide-skyscraper" aria-label="300 by 600 wide skyscraper advertisement">300<br />x600</div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <a class="brand" href="index.html" aria-label="PerfectGames home">
+        <div class="logo-mark">PG</div>
+        <div class="brand-name">PerfectGames</div>
+      </a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="ads.html">Ads</a>
+        <a href="index.html#support">Support</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
