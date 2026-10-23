@@ -3,112 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfect Games 728x90</title>
+    <title>Perfect Games Ad</title>
     <style>
       :root {
-        --bg: #c6c6c6;
-        --red: #eb1b1b;
-        --dark-red: #d91313;
-        --black: #1a1a1a;
+        --bg: #c5c5c5;
+        --red: #ef1d1d;
+        --dark-red: #d21313;
+        --black: #111111;
         --white: #f7f7f7;
+        --gray: #cfcfcf;
       }
 
       * { box-sizing: border-box; }
       html, body {
         margin: 0;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
         background: var(--bg);
         font-family: Arial, Helvetica, sans-serif;
       }
       body {
         display: grid;
         place-items: center;
+        min-height: 100vh;
       }
       .frame {
         width: 728px;
         height: 90px;
         background: var(--bg);
-        overflow: hidden;
+        display: block;
       }
       svg {
+        display: block;
         width: 100%;
         height: 100%;
-        display: block;
       }
     </style>
   </head>
   <body>
     <div class="frame">
-      <svg viewBox="0 0 728 90" role="img" aria-label="Perfect Games banner">
+      <svg viewBox="0 0 728 90" role="img" aria-label="Perfect Games advertising banner">
         <defs>
-          <linearGradient id="ctaRed" x1="0" x2="1">
-            <stop offset="0%" stop-color="#e81f1f"/>
-            <stop offset="100%" stop-color="#d40f0f"/>
+          <linearGradient id="ctaGrad" x1="0" x2="1">
+            <stop offset="0%" stop-color="#ef1c1c"/>
+            <stop offset="100%" stop-color="#d81212"/>
           </linearGradient>
         </defs>
 
-        <rect width="728" height="90" fill="#c6c6c6"/>
+        <rect width="728" height="90" fill="#c5c5c5"/>
 
-        <!-- left branding -->
-        <g>
-          <text x="12" y="47" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="900" fill="#ed1b1b" stroke="#111111" stroke-width="2.2" paint-order="stroke" letter-spacing="-1.5">Perfect Games</text>
-          <path d="M8 58 H245" stroke="#141414" stroke-width="4" stroke-linecap="round" fill="none"/>
-          <text x="17" y="76" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" fill="#111111" letter-spacing="0.25">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</text>
+        <!-- LEFT BRAND -->
+        <g transform="translate(6,8)">
+          <text x="0" y="44" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" fill="#ee1d1d" stroke="#111111" stroke-width="2.2" paint-order="stroke" letter-spacing="-1.8">Perfect Games</text>
+          <path d="M2 55 H220" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <text x="0" y="76" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="700" fill="#111111" letter-spacing="0.5">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</text>
         </g>
 
-        <!-- arcade machine -->
-        <g transform="translate(308,10)">
-          <rect x="0" y="6" width="72" height="54" fill="#d7d7d7" stroke="#3c3c3c" stroke-width="2.5"/>
-          <rect x="8" y="15" width="56" height="30" fill="#e7d9d5" stroke="#3f3f3f" stroke-width="2"/>
-          <rect x="12" y="0" width="48" height="8" fill="#d1d1d1" stroke="#3c3c3c" stroke-width="1.5"/>
-          <circle cx="13" cy="64" r="4" fill="#2a2a2a"/>
-          <circle cx="35" cy="64" r="4" fill="#2a2a2a"/>
-          <circle cx="58" cy="64" r="4" fill="#2a2a2a"/>
-          <path d="M0 68 H72" stroke="#171717" stroke-width="2" fill="none"/>
-          <rect x="23" y="46" width="26" height="15" fill="#2a2a2a"/>
-          <path d="M35 58 H52" stroke="#171717" stroke-width="2.5" fill="none"/>
-          <circle cx="59" cy="31" r="6.5" fill="#e9e9e9" stroke="#171717" stroke-width="1.5"/>
-          <circle cx="59" cy="31" r="2.3" fill="#bcbcbc"/>
-          <path d="M60 22 L68 30 L60 38" stroke="#171717" stroke-width="1.5" fill="none"/>
-          <path d="M74 22 L80 28 L75 33" stroke="#171717" stroke-width="1.5" fill="none"/>
+        <!-- ARCADE MACHINE -->
+        <g transform="translate(284,8)">
+          <rect x="0" y="8" width="70" height="52" fill="#d1d1d1" stroke="#3b3b3b" stroke-width="2.4"/>
+          <rect x="7" y="16" width="56" height="29" fill="#e8dddd" stroke="#3b3b3b" stroke-width="2"/>
+          <rect x="12" y="0" width="46" height="9" fill="#d7d7d7" stroke="#3b3b3b" stroke-width="1.5"/>
+          <circle cx="12" cy="63" r="4" fill="#2d2d2d"/>
+          <circle cx="35" cy="63" r="4" fill="#2d2d2d"/>
+          <circle cx="58" cy="63" r="4" fill="#2d2d2d"/>
+          <path d="M0 67 H70" stroke="#191919" stroke-width="2" fill="none"/>
+          <rect x="19" y="46" width="32" height="14" fill="#2a2a2a"/>
+          <path d="M33 58 H52" stroke="#171717" stroke-width="2.5" fill="none"/>
+          <circle cx="60" cy="31" r="7" fill="#f2f2f2" stroke="#171717" stroke-width="1.5"/>
+          <circle cx="60" cy="31" r="2.6" fill="#b3b3b3"/>
+          <path d="M61 22 L69 31 L61 39" stroke="#171717" stroke-width="1.5" fill="none"/>
+          <path d="M74 22 L79 27 L75 33" stroke="#171717" stroke-width="1.5" fill="none"/>
         </g>
 
-        <!-- bowling pin and ball -->
-        <g transform="translate(407,19)">
+        <!-- CENTER TEXT -->
+        <g transform="translate(381,14)">
+          <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#111111" letter-spacing="-0.4">Book your kids birthday party, group and</text>
+          <text x="0" y="22" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#111111" letter-spacing="-0.4">corporate events, or rent the venue!</text>
+        </g>
+
+        <!-- BOWLING PIN + BALL -->
+        <g transform="translate(412,20)">
           <g>
-            <path d="M0 24 L18 24 L18 8 L30 8 L30 24 L48 24 L48 12 L60 12 L60 24 L78 24 L78 0 L90 0 L90 24" stroke="#171717" stroke-width="1.8" fill="none"/>
-            <circle cx="28" cy="35" r="2.5" fill="#171717"/>
+            <path d="M0 24 L18 24 L18 8 L30 8 L30 24 L48 24 L48 12 L60 12 L60 24 L78 24 L78 0 L90 0 L90 24" stroke="#111111" stroke-width="1.8" fill="none"/>
+            <circle cx="28" cy="35" r="2.4" fill="#111111"/>
           </g>
-          <g transform="translate(62,10)">
-            <circle cx="0" cy="18" r="16" fill="#f5f5f5" stroke="#171717" stroke-width="2"/>
-            <path d="M-10 18 Q0 8 10 18" stroke="#171717" stroke-width="2" fill="none"/>
-            <path d="M-8 18 L-1 13 M8 18 L2 13" stroke="#171717" stroke-width="2" fill="none"/>
+          <g transform="translate(62,11)">
+            <circle cx="0" cy="18" r="15" fill="#f9f9f9" stroke="#111111" stroke-width="2"/>
+            <path d="M-10 18 Q0 7 10 18" stroke="#111111" stroke-width="2" fill="none"/>
+            <path d="M-7 18 L-2 13 M7 18 L2 13" stroke="#111111" stroke-width="2" fill="none"/>
           </g>
         </g>
 
-        <!-- text copy -->
-        <g transform="translate(470,14)">
-          <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#111111" letter-spacing="-0.5">Book your kids birthday party, group and</text>
-          <text x="0" y="22" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#111111" letter-spacing="-0.5">corporate events, or rent the venue!</text>
-        </g>
-
-        <!-- CTA -->
-        <g transform="translate(474,52)">
-          <rect x="0" y="0" width="220" height="28" rx="14" fill="url(#ctaRed)" stroke="#171717" stroke-width="2"/>
-          <text x="110" y="18" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="900" fill="#ffffff" letter-spacing="0.2">FILL OUT FORM TO GET STARTED!!!</text>
+        <!-- CTA BUTTON -->
+        <g transform="translate(495,52)">
+          <rect x="0" y="0" width="220" height="27" rx="13.5" fill="url(#ctaGrad)" stroke="#111111" stroke-width="2"/>
+          <text x="110" y="18" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="900" fill="#ffffff" letter-spacing="0.1">FILL OUT FORM TO GET STARTED!!!</text>
         </g>
 
         <!-- right decorations -->
-        <g transform="translate(679,8)">
-          <path d="M14 0 L20 18 L38 18 L24 28 L29 46 L14 34 L-1 46 L4 28 L-10 18 L8 18 Z" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
-          <path d="M14 0 L14 46" stroke="#111111" stroke-width="1.5" fill="none"/>
+        <g transform="translate(686,8)">
+          <path d="M12 0 L18 18 L36 18 L22 30 L27 48 L12 36 L-3 48 L2 30 L-12 18 L6 18 Z" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
+          <path d="M12 0 L12 48" stroke="#111111" stroke-width="1.5" fill="none"/>
         </g>
-        <g transform="translate(678,20)">
-          <path d="M8 0 L12 12 L24 13 L15 20 L18 33 L8 26 L-2 33 L1 20 L-8 13 L4 12 Z" fill="#ffffff" stroke="#111111" stroke-width="1.2"/>
+        <g transform="translate(687,18)">
+          <path d="M8 0 L12 12 L24 13 L15 20 L18 33 L8 26 L-2 33 L1 20 L-8 13 L4 12 Z" fill="#ffffff" stroke="#111111" stroke-width="1.25"/>
         </g>
-        <g transform="translate(695,8)">
-          <path d="M14 0 L18 12 L30 14 L20 22 L23 34 L14 28 L5 34 L8 22 L-2 14 L10 12 Z" fill="#ffffff" stroke="#111111" stroke-width="1.2"/>
+        <g transform="translate(706,8)">
+          <path d="M8 0 L12 12 L24 14 L15 22 L19 34 L8 27 L-2 34 L2 22 L-8 14 L5 12 Z" fill="#ffffff" stroke="#111111" stroke-width="1.25"/>
         </g>
       </svg>
     </div>
