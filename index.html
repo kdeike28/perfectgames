@@ -6,15 +6,15 @@
     <title>Executive Summary</title>
     <style>
       :root {
-        --bg: #f3f3f1;
+        --bg: #e7e7e7;
         --panel: #ffffff;
-        --panel-soft: #f7f7f7;
-        --ink: #151515;
-        --muted: #555;
-        --line: #d8d8d8;
-        --accent: #9a6bff;
-        --accent-2: #ffb703;
-        --success: #2cc36b;
+        --panel-soft: #f4f4f4;
+        --ink: #111111;
+        --muted: #4d4d4d;
+        --line: #d4d4d4;
+        --accent: #d71920;
+        --accent-dark: #a60d15;
+        --accent-soft: #f6dfe0;
         --shadow: 0 18px 42px rgba(17, 17, 17, 0.08);
       }
 
@@ -29,7 +29,7 @@
       body {
         margin: 0;
         min-height: 100vh;
-        background: linear-gradient(180deg, #eceae6 0%, #f5f5f3 100%);
+        background: linear-gradient(180deg, #dadada 0%, var(--bg) 100%);
         color: var(--ink);
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -54,7 +54,7 @@
         gap: 24px;
         padding: 20px 32px;
         border-bottom: 3px solid var(--ink);
-        background: #f8f8f8;
+        background: #f7f7f7;
       }
 
       .brand {
@@ -68,7 +68,7 @@
         height: 54px;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, var(--accent), #6641d8);
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
         color: white;
         font-weight: 800;
         border: 3px solid var(--ink);
@@ -133,7 +133,7 @@
 
       .hero-copy {
         padding: 52px 42px 40px;
-        background: linear-gradient(135deg, #f3f0ff 0%, #ffffff 100%);
+        background: linear-gradient(135deg, var(--accent-soft) 0%, #ffffff 100%);
       }
 
       .eyebrow {
@@ -181,7 +181,8 @@
       }
 
       .button.primary {
-        background: var(--ink);
+        background: var(--accent);
+        border-color: var(--accent);
         color: white;
       }
 
@@ -200,7 +201,7 @@
       .stat {
         padding: 18px 12px;
         border: 3px solid var(--ink);
-        background: rgba(255,255,255,0.7);
+        background: rgba(255,255,255,0.72);
       }
 
       .stat strong {
@@ -218,7 +219,7 @@
       }
 
       .hero-visual {
-        background: linear-gradient(180deg, #111111 0%, #2d2d2d 100%);
+        background: linear-gradient(180deg, #111111 0%, #2a2a2a 100%);
         color: white;
         border-left: 3px solid var(--ink);
         display: flex;
@@ -231,7 +232,7 @@
       .game-panel {
         width: 100%;
         max-width: 430px;
-        background: linear-gradient(180deg, #6d4ae0 0%, #39257f 100%);
+        background: linear-gradient(180deg, #d71920 0%, #7a0a0e 100%);
         border: 3px solid white;
         padding: 18px;
       }
@@ -254,7 +255,7 @@
 
       .cover {
         height: 200px;
-        background: linear-gradient(135deg, #ffb703 0%, #ff7a59 30%, #2cc36b 100%);
+        background: linear-gradient(135deg, #f5d0d4 0%, #d71920 30%, #111 100%);
         border: 3px solid white;
         margin-bottom: 18px;
         display: flex;
@@ -264,6 +265,7 @@
         font-size: 2.2rem;
         font-weight: 800;
         letter-spacing: -0.06em;
+        color: white;
       }
 
       .game-meta {
@@ -293,7 +295,7 @@
       .feature {
         padding: 28px 22px;
         border-right: 3px solid var(--ink);
-        background: #fafafa;
+        background: #f8f8f8;
       }
 
       .feature:last-child {
@@ -358,10 +360,10 @@
         border-bottom: 3px solid var(--ink);
       }
 
-      .thumb.one { background: linear-gradient(135deg, #d9f99d, #2cc36b); }
-      .thumb.two { background: linear-gradient(135deg, #c4b5fd, #7c3aed); }
-      .thumb.three { background: linear-gradient(135deg, #fdba74, #f97316); }
-      .thumb.four { background: linear-gradient(135deg, #93c5fd, #2563eb); }
+      .thumb.one { background: linear-gradient(135deg, #f7d4d7, #d71920); }
+      .thumb.two { background: linear-gradient(135deg, #d4d4d4, #444); }
+      .thumb.three { background: linear-gradient(135deg, #f7d4d7, #8a0d14); }
+      .thumb.four { background: linear-gradient(135deg, #e0e0e0, #111); }
 
       .game-info {
         padding: 18px 14px 16px;
@@ -456,8 +458,8 @@
         width: 100%;
         padding: 12px 16px;
         border: 3px solid var(--ink);
-        background: var(--accent-2);
-        color: var(--ink);
+        background: var(--accent);
+        color: white;
         font-weight: 800;
         cursor: pointer;
       }
