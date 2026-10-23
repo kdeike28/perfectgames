@@ -9,7 +9,7 @@
       --bg: #e7e7e7; --panel: #ffffff; --ink: #111111; --muted: #4d4d4d;
       --line: #d4d4d4; --accent: #d71920; --accent-dark: #a60d15;
       --accent-soft: #f6dfe0; --shadow: 0 18px 42px rgba(17,17,17,.08);
-      --gap: 17px;
+      --gap: 16px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -49,15 +49,15 @@
     }
     h1 { margin: 0 0 10px; font-size: clamp(2.3rem, 4vw, 3.8rem); line-height: .98; letter-spacing: -.07em; }
     .lead { margin: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.55; }
-    .ads-content { padding: 32px 24px; background: #fff; overflow-x: auto; }
-    .ad-layout { width: 970px; margin: 0 auto; }
-    .banner-row { display: flex; justify-content: center; margin-bottom: 17px; }
-    .banner-image { display: block; width: 970px; height: 120px; object-fit: fill; }
-    .columns { display: grid; grid-template-columns: 200px 400px 336px; gap: var(--gap); align-items: start; }
-    .middle-column { height: 750px; display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 17px; }
+    .ads-content { padding: 32px; background: #fff; overflow-x: auto; }
+    .ad-layout { width: max-content; max-width: 100%; margin: 0 auto; }
+    .banner-row { display: flex; justify-content: center; margin-bottom: 16px; }
+    .banner-image { display: block; width: 728px; height: 90px; object-fit: fill; }
+    .columns { display: grid; grid-template-columns: 160px 336px 300px; gap: var(--gap); align-items: start; }
+    .middle-column { height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 10px; }
     .ad-slot {
       position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
-      flex: none; background: #e56568; color: #fff; text-align: center; font-size: 34px;
+      flex: none; background: #e56568; color: #fff; text-align: center; font-size: 32px;
       font-weight: 400; line-height: 1.15; text-shadow: 0 1px 2px rgba(0,0,0,.12); isolation: isolate;
     }
     .ad-slot::before {
@@ -68,12 +68,12 @@
       content: ""; position: absolute; inset: 0; z-index: -1;
       background: linear-gradient(115deg, rgba(177,70,73,.25), transparent 55%);
     }
-    .mobile-banner { width: 400px; height: 80px; }
-    .medium-rectangle { width: 400px; height: 300px; }
-    .medium-rectangle-image { display: block; width: 400px; height: 300px; object-fit: fill; }
-    .large-rectangle { width: 400px; height: 336px; }
-    .skyscraper { width: 200px; height: 750px; }
-    .wide-skyscraper { width: 336px; height: 750px; }
+    .mobile-banner { width: 320px; height: 50px; }
+    .medium-rectangle { width: 300px; height: 250px; }
+    .medium-rectangle-image { display: block; width: 300px; height: 250px; object-fit: fill; }
+    .large-rectangle { width: 336px; height: 280px; }
+    .skyscraper { width: 160px; height: 600px; }
+    .wide-skyscraper { width: 300px; height: 600px; }
     footer {
       display: flex; align-items: center; justify-content: space-between; gap: 20px;
       padding: 22px 32px; border-top: 3px solid var(--ink); background: #111; color: white; flex-wrap: wrap;
@@ -119,16 +119,16 @@
     <main class="ads-content">
       <div class="ad-layout" aria-label="PerfectGames advertising layout">
         <div class="banner-row">
-          <img class="banner-image" src="Display%20Ads.png" alt="Perfect Games display advertisement" width="970" height="120" />
+          <img class="banner-image" src="Display%20Ads.png" alt="Perfect Games display advertisement" width="728" height="90" />
         </div>
         <section class="columns" aria-label="Advertisement placements">
-          <div class="ad-slot skyscraper" aria-label="160 by 600 skyscraper advertisement">200<br />x750</div>
+          <div class="ad-slot skyscraper" aria-label="160 by 600 skyscraper advertisement">160<br />x600</div>
           <div class="middle-column">
-            <div class="ad-slot mobile-banner" aria-label="320 by 50 mobile banner advertisement">400x80</div>
-            <div class="ad-slot medium-rectangle" aria-label="300 by 250 rectangle advertisement"><img class="medium-rectangle-image" src="Display%20Ads%20(1).png" alt="Perfect Games 300 by 250 display advertisement" width="400" height="300" /></div>
-            <div class="ad-slot large-rectangle" aria-label="336 by 280 large rectangle advertisement">400x336</div>
+            <div class="ad-slot mobile-banner" aria-label="320 by 50 mobile banner advertisement">320x50</div>
+            <div class="ad-slot medium-rectangle" aria-label="300 by 250 rectangle advertisement"><img class="medium-rectangle-image" src="Display%20Ads%20(1).png" alt="Perfect Games 300 by 250 display advertisement" width="300" height="250" /></div>
+            <div class="ad-slot large-rectangle" aria-label="336 by 280 large rectangle advertisement">336x280</div>
           </div>
-          <div class="ad-slot wide-skyscraper" aria-label="300 by 600 wide skyscraper advertisement">336<br />x750</div>
+          <div class="ad-slot wide-skyscraper" aria-label="300 by 600 wide skyscraper advertisement">300<br />x600</div>
         </section>
       </div>
     </main>
