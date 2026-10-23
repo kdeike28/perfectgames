@@ -3,17 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ads Layout</title>
+    <title>Perfect Games Ad</title>
     <style>
       :root {
-        --page-bg: #ebebeb;
-        --frame-bg: #f4f4f4;
-        --slot-red: #d56d69;
-        --slot-red-deep: #c76362;
-        --slot-light: rgba(255,255,255,0.08);
-        --slot-shadow: rgba(0,0,0,0.12);
-        --label: rgba(255,255,255,0.93);
-        --panel-line: rgba(255,255,255,0.95);
+        --bg: #c6c6c6;
+        --red: #eb1d1d;
+        --dark-red: #d71414;
+        --black: #171717;
       }
 
       * { box-sizing: border-box; }
@@ -21,184 +17,100 @@
         margin: 0;
         width: 100%;
         min-height: 100%;
-        background: var(--page-bg);
+        background: var(--bg);
         font-family: Arial, Helvetica, sans-serif;
       }
       body {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 20px;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
       }
-
-      .layout {
-        width: min(1180px, 100%);
-        background: var(--frame-bg);
-        border: 2px solid rgba(0,0,0,0.08);
-        padding: 18px 20px 20px;
-      }
-
-      .top-banner {
-        position: relative;
-        width: 100%;
-        height: 110px;
-        margin-bottom: 18px;
-        background: linear-gradient(135deg, #d66b67 0%, #d56a66 100%);
-        border: 3px solid var(--panel-line);
+      .frame {
+        width: 728px;
+        height: 90px;
+        background: var(--bg);
         overflow: hidden;
       }
-
-      .top-banner::before,
-      .slot::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02) 24%, rgba(0,0,0,0.10) 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      }
-
-      .top-banner::after,
-      .slot::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.12) 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%, 0 57%);
-      }
-
-      .slot {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, var(--slot-red) 0%, var(--slot-red-deep) 100%);
-        border: 3px solid var(--panel-line);
-        overflow: hidden;
-        color: var(--label);
-        font-weight: 300;
-        letter-spacing: -0.08em;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      }
-
-      .label {
-        position: relative;
-        z-index: 1;
-        font-size: clamp(1.9rem, 4vw, 5rem);
-        line-height: 0.88;
-      }
-
-      .row {
-        display: grid;
-        grid-template-columns: 165px 1fr 300px;
-        gap: 0;
-        align-items: stretch;
-      }
-
-      .left-column {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .side-slot {
+      svg {
+        display: block;
         width: 100%;
-        height: 600px;
-      }
-
-      .middle-column {
-        display: grid;
-        grid-template-rows: 50px 1fr 280px;
-      }
-
-      .top-mid {
-        width: 100%;
-        height: 50px;
-        margin-bottom: 0;
-      }
-
-      .center-box {
-        position: relative;
-        width: 100%;
-        height: 250px;
-      }
-
-      .bottom-mid {
-        width: 100%;
-        height: 280px;
-      }
-
-      .right-column {
-        display: flex;
-      }
-
-      .right-slot {
-        width: 100%;
-        min-height: 600px;
-      }
-
-      .left-column .label {
-        font-size: clamp(1.8rem, 2.8vw, 4rem);
-      }
-
-      .middle-column .label,
-      .right-column .label {
-        font-size: clamp(2.1rem, 4vw, 4.6rem);
-      }
-
-      .small-label { font-size: clamp(2.2rem, 2.8vw, 4rem); }
-      .medium-label { font-size: clamp(2.1rem, 3vw, 4rem); }
-      .large-label { font-size: clamp(2.1rem, 3vw, 4rem); }
-
-      @media (max-width: 980px) {
-        .row {
-          grid-template-columns: 1fr;
-        }
-        .left-column, .right-column, .middle-column {
-          width: 100%;
-        }
-        .side-slot, .right-slot {
-          height: 220px;
-          min-height: 220px;
-        }
-        .middle-column {
-          grid-template-rows: 50px 250px 280px;
-        }
+        height: 100%;
       }
     </style>
   </head>
   <body>
-    <div class="layout">
-      <div class="top-banner slot">
-        <div class="label">728x90</div>
-      </div>
+    <div class="frame">
+      <svg viewBox="0 0 728 90" role="img" aria-label="Perfect Games banner ad">
+        <defs>
+          <linearGradient id="cta" x1="0" x2="1">
+            <stop offset="0%" stop-color="#ef1d1d" />
+            <stop offset="100%" stop-color="#d61212" />
+          </linearGradient>
+        </defs>
 
-      <div class="row">
-        <div class="left-column">
-          <div class="slot side-slot">
-            <div class="label">160<br>x600</div>
-          </div>
-        </div>
+        <rect width="728" height="90" fill="#c6c6c6"/>
 
-        <div class="middle-column">
-          <div class="slot top-mid">
-            <div class="label small-label">320x50</div>
-          </div>
+        <!-- left branding -->
+        <g>
+          <text x="12" y="43" font-size="36" font-weight="900" fill="#ef1d1d" stroke="#111111" stroke-width="2.3" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" letter-spacing="-1.7">Perfect Games</text>
+          <path d="M8 55 H245" stroke="#151515" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <text x="14" y="76" font-size="12.5" font-weight="700" fill="#111111" font-family="Arial, Helvetica, sans-serif" letter-spacing="0.2">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</text>
+        </g>
 
-          <div class="slot center-box">
-            <div class="label medium-label">300x250</div>
-          </div>
+        <!-- arcade cabinet -->
+        <g transform="translate(300,8)">
+          <rect x="0" y="8" width="72" height="54" fill="#d7d7d7" stroke="#3a3a3a" stroke-width="2.5"/>
+          <rect x="8" y="15" width="56" height="30" fill="#e8d9d4" stroke="#363636" stroke-width="2"/>
+          <rect x="12" y="0" width="48" height="9" fill="#d3d3d3" stroke="#3a3a3a" stroke-width="1.5"/>
+          <circle cx="12" cy="64" r="4" fill="#2a2a2a"/>
+          <circle cx="35" cy="64" r="4" fill="#2a2a2a"/>
+          <circle cx="58" cy="64" r="4" fill="#2a2a2a"/>
+          <path d="M0 68 H72" stroke="#171717" stroke-width="2" fill="none"/>
+          <rect x="22" y="46" width="28" height="15" fill="#2a2a2a"/>
+          <path d="M35 58 H52" stroke="#171717" stroke-width="2.5" fill="none"/>
+          <circle cx="58" cy="31" r="6.5" fill="#e9e9e9" stroke="#171717" stroke-width="1.4"/>
+          <circle cx="58" cy="31" r="2.5" fill="#bcbcbc"/>
+          <path d="M58 22 L66 30 L58 38" stroke="#171717" stroke-width="1.5" fill="none"/>
+          <path d="M72 22 L78 27 L74 32" stroke="#171717" stroke-width="1.5" fill="none"/>
+        </g>
 
-          <div class="slot bottom-mid">
-            <div class="label large-label">336x280</div>
-          </div>
-        </div>
+        <!-- bowling pin / ball -->
+        <g transform="translate(400,20)">
+          <g>
+            <path d="M0 24 L18 24 L18 8 L30 8 L30 24 L48 24 L48 12 L60 12 L60 24 L78 24 L78 0 L90 0 L90 24" stroke="#171717" stroke-width="1.8" fill="none"/>
+            <circle cx="28" cy="35" r="2.5" fill="#171717"/>
+          </g>
+          <g transform="translate(62,12)">
+            <circle cx="0" cy="18" r="16" fill="#f7f7f7" stroke="#171717" stroke-width="2"/>
+            <path d="M-10 18 Q0 8 10 18" stroke="#171717" stroke-width="2" fill="none"/>
+            <path d="M-7 18 L-2 13 M7 18 L2 13" stroke="#171717" stroke-width="2" fill="none"/>
+          </g>
+        </g>
 
-        <div class="right-column">
-          <div class="slot right-slot">
-            <div class="label">300<br>x600</div>
-          </div>
-        </div>
-      </div>
+        <!-- center text -->
+        <g transform="translate(480,14)">
+          <text x="0" y="0" font-size="14" font-weight="900" fill="#171717" font-family="Arial, Helvetica, sans-serif" letter-spacing="-0.45">Book your kids birthday party, group and</text>
+          <text x="0" y="22" font-size="14" font-weight="900" fill="#171717" font-family="Arial, Helvetica, sans-serif" letter-spacing="-0.45">corporate events, or rent the venue!</text>
+        </g>
+
+        <!-- CTA -->
+        <g transform="translate(486,52)">
+          <rect x="0" y="0" width="219" height="27" rx="13.5" fill="url(#cta)" stroke="#171717" stroke-width="2"/>
+          <text x="109.5" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" letter-spacing="0.15">FILL OUT FORM TO GET STARTED!!!</text>
+        </g>
+
+        <!-- party decorations -->
+        <g transform="translate(685,10)">
+          <path d="M14 0 L20 18 L38 18 L24 28 L29 46 L14 34 L-1 46 L4 28 L-10 18 L8 18 Z" fill="#ffffff" stroke="#171717" stroke-width="1.5"/>
+          <path d="M14 0 L14 46" stroke="#171717" stroke-width="1.5" fill="none"/>
+        </g>
+        <g transform="translate(684,20)">
+          <path d="M8 0 L12 12 L24 13 L15 20 L18 33 L8 26 L-2 33 L1 20 L-8 13 L4 12 Z" fill="#ffffff" stroke="#171717" stroke-width="1.2"/>
+        </g>
+        <g transform="translate(702,8)">
+          <path d="M12 0 L16 12 L28 14 L18 22 L22 34 L12 28 L2 34 L6 22 L-4 14 L8 12 Z" fill="#ffffff" stroke="#171717" stroke-width="1.2"/>
+        </g>
+      </svg>
     </div>
   </body>
 </html>
