@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Executive Summary</title>
+    <title>PerfectGames</title>
     <style>
       :root {
         --bg: #e7e7e7;
@@ -18,14 +18,8 @@
         --shadow: 0 18px 42px rgba(17, 17, 17, 0.08);
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         margin: 0;
         min-height: 100vh;
@@ -33,12 +27,7 @@
         color: var(--ink);
         font-family: Arial, Helvetica, sans-serif;
       }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
+      a { color: inherit; text-decoration: none; }
       .page {
         max-width: 1280px;
         margin: 28px auto;
@@ -46,7 +35,6 @@
         border: 3px solid var(--ink);
         box-shadow: var(--shadow);
       }
-
       .topbar {
         display: flex;
         align-items: center;
@@ -56,13 +44,11 @@
         border-bottom: 3px solid var(--ink);
         background: #f7f7f7;
       }
-
       .brand {
         display: flex;
         align-items: center;
         gap: 16px;
       }
-
       .logo-mark {
         width: 54px;
         height: 54px;
@@ -74,13 +60,11 @@
         border: 3px solid var(--ink);
         border-radius: 12px;
       }
-
       .brand-name {
         font-size: clamp(1.6rem, 2vw, 2.3rem);
         font-weight: 800;
         letter-spacing: -0.06em;
       }
-
       .nav {
         display: flex;
         align-items: center;
@@ -88,12 +72,10 @@
         font-weight: 700;
         flex-wrap: wrap;
       }
-
       .nav a {
         position: relative;
         color: var(--ink);
       }
-
       .nav a::after {
         content: "";
         position: absolute;
@@ -106,36 +88,23 @@
         transform-origin: left;
         transition: transform 0.2s ease;
       }
-
-      .nav a:hover::after {
-        transform: scaleX(1);
-      }
-
+      .nav a:hover::after { transform: scaleX(1); }
       .top-action {
         padding: 12px 18px;
         border: 3px solid var(--ink);
         background: var(--ink);
         color: white;
         font-weight: 700;
-        transition: transform 0.2s ease;
       }
-
-      .top-action:hover {
-        transform: translateY(-2px);
-      }
-
       .hero {
         display: grid;
         grid-template-columns: 1.35fr 0.95fr;
-        gap: 0;
         border-bottom: 3px solid var(--ink);
       }
-
       .hero-copy {
         padding: 52px 42px 40px;
         background: linear-gradient(135deg, var(--accent-soft) 0%, #ffffff 100%);
       }
-
       .eyebrow {
         display: inline-block;
         margin-bottom: 18px;
@@ -147,14 +116,12 @@
         text-transform: uppercase;
         font-weight: 700;
       }
-
       h1 {
         margin: 0 0 18px;
         font-size: clamp(2.5rem, 5vw, 5rem);
         line-height: 0.92;
         letter-spacing: -0.07em;
       }
-
       .lead {
         max-width: 620px;
         margin: 0 0 28px;
@@ -162,14 +129,12 @@
         font-size: 1.18rem;
         line-height: 1.55;
       }
-
       .cta-row {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
         margin-bottom: 28px;
       }
-
       .button {
         display: inline-flex;
         align-items: center;
@@ -179,37 +144,31 @@
         font-weight: 800;
         min-width: 170px;
       }
-
       .button.primary {
         background: var(--accent);
         border-color: var(--accent);
         color: white;
       }
-
       .button.secondary {
         background: transparent;
         color: var(--ink);
       }
-
       .stats {
         display: grid;
         grid-template-columns: repeat(3, minmax(120px, 1fr));
         gap: 18px;
         max-width: 620px;
       }
-
       .stat {
         padding: 18px 12px;
         border: 3px solid var(--ink);
         background: rgba(255,255,255,0.72);
       }
-
       .stat strong {
         display: block;
         font-size: clamp(1.5rem, 2.2vw, 2.4rem);
         letter-spacing: -0.06em;
       }
-
       .stat span {
         font-size: 0.8rem;
         font-weight: 700;
@@ -217,7 +176,6 @@
         letter-spacing: 0.08em;
         color: var(--muted);
       }
-
       .hero-visual {
         background: linear-gradient(180deg, #111111 0%, #2a2a2a 100%);
         color: white;
@@ -228,7 +186,6 @@
         min-height: 420px;
         padding: 24px;
       }
-
       .game-panel {
         width: 100%;
         max-width: 430px;
@@ -236,13 +193,11 @@
         border: 3px solid white;
         padding: 18px;
       }
-
       .game-card {
         background: rgba(255,255,255,0.08);
         border: 2px solid rgba(255,255,255,0.25);
         padding: 18px;
       }
-
       .mini-header {
         display: flex;
         justify-content: space-between;
@@ -252,7 +207,6 @@
         opacity: 0.9;
         margin-bottom: 20px;
       }
-
       .cover {
         height: 200px;
         background: linear-gradient(135deg, #f5d0d4 0%, #d71920 30%, #111 100%);
@@ -267,7 +221,6 @@
         letter-spacing: -0.06em;
         color: white;
       }
-
       .game-meta {
         display: flex;
         justify-content: space-between;
@@ -275,55 +228,44 @@
         gap: 12px;
         font-weight: 700;
       }
-
       .badge {
         display: inline-flex;
-        padding: 7px 12px;
         background: rgba(255,255,255,0.14);
         border: 2px solid rgba(255,255,255,0.32);
+        padding: 7px 12px;
         font-size: 0.72rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-
       .feature-strip {
         display: grid;
         grid-template-columns: repeat(3, minmax(180px, 1fr));
         border-bottom: 3px solid var(--ink);
       }
-
       .feature {
         padding: 28px 22px;
         border-right: 3px solid var(--ink);
         background: #f8f8f8;
       }
-
-      .feature:last-child {
-        border-right: none;
-      }
-
+      .feature:last-child { border-right: none; }
       .feature h3 {
         margin: 0 0 10px;
         font-size: clamp(1.2rem, 1.5vw, 1.7rem);
         letter-spacing: -0.05em;
       }
-
       .feature p {
         margin: 0;
         color: var(--muted);
         line-height: 1.55;
       }
-
       .main-grid {
         display: grid;
         grid-template-columns: 1.75fr 0.9fr;
       }
-
       .content-column {
         padding: 38px 32px 32px;
         border-right: 3px solid var(--ink);
       }
-
       .section-header {
         display: flex;
         align-items: end;
@@ -331,56 +273,44 @@
         gap: 16px;
         margin-bottom: 22px;
       }
-
       .section-header h2 {
         margin: 0;
         font-size: clamp(2rem, 2.6vw, 3rem);
         letter-spacing: -0.06em;
       }
-
       .section-header a {
         font-weight: 700;
         text-decoration: underline;
       }
-
       .cards {
         display: grid;
         grid-template-columns: repeat(2, minmax(220px, 1fr));
         gap: 20px;
       }
-
       .game-item {
         border: 3px solid var(--ink);
         background: #f8f8f8;
         overflow: hidden;
       }
-
       .thumb {
         height: 170px;
         border-bottom: 3px solid var(--ink);
       }
-
       .thumb.one { background: linear-gradient(135deg, #f7d4d7, #d71920); }
       .thumb.two { background: linear-gradient(135deg, #d4d4d4, #444); }
       .thumb.three { background: linear-gradient(135deg, #f7d4d7, #8a0d14); }
       .thumb.four { background: linear-gradient(135deg, #e0e0e0, #111); }
-
-      .game-info {
-        padding: 18px 14px 16px;
-      }
-
+      .game-info { padding: 18px 14px 16px; }
       .game-info h3 {
         margin: 0 0 8px;
         font-size: 1.45rem;
         letter-spacing: -0.05em;
       }
-
       .game-info p {
         margin: 0 0 14px;
         color: var(--muted);
         line-height: 1.45;
       }
-
       .meta-row {
         display: flex;
         align-items: center;
@@ -389,7 +319,6 @@
         color: var(--ink);
         font-weight: 700;
       }
-
       .pill {
         display: inline-block;
         padding: 8px 10px;
@@ -399,31 +328,26 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-
       .sidebar {
         padding: 38px 24px 24px;
         background: #f7f7f7;
       }
-
       .side-card {
         border: 3px solid var(--ink);
         background: white;
         padding: 18px 16px;
         margin-bottom: 22px;
       }
-
       .side-card h3 {
         margin: 0 0 14px;
         font-size: 1.5rem;
         letter-spacing: -0.05em;
       }
-
       .trend-list {
         list-style: none;
         margin: 0;
         padding: 0;
       }
-
       .trend-list li {
         display: flex;
         justify-content: space-between;
@@ -432,20 +356,12 @@
         border-bottom: 2px solid var(--line);
         font-weight: 700;
       }
-
-      .trend-list li:last-child {
-        border-bottom: none;
-      }
-
-      .trend-list span:last-child {
-        color: var(--muted);
-      }
-
+      .trend-list li:last-child { border-bottom: none; }
+      .trend-list span:last-child { color: var(--muted); }
       .newsletter {
         display: grid;
         gap: 12px;
       }
-
       .newsletter input {
         width: 100%;
         padding: 12px 14px;
@@ -453,7 +369,6 @@
         background: #fafafa;
         font-size: 1rem;
       }
-
       .newsletter button {
         width: 100%;
         padding: 12px 16px;
@@ -463,7 +378,6 @@
         font-weight: 800;
         cursor: pointer;
       }
-
       footer {
         display: flex;
         align-items: center;
@@ -475,7 +389,6 @@
         color: white;
         flex-wrap: wrap;
       }
-
       .footer-links {
         display: flex;
         align-items: center;
@@ -483,490 +396,27 @@
         flex-wrap: wrap;
         font-weight: 700;
       }
-
-      .ad-hero {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 24px 26px 20px;
-        width: 100%;
-        min-height: 230px;
-        background: #c4c4c4;
-        border-bottom: 3px solid var(--ink);
-        overflow: hidden;
-      }
-
-      .ad-brand {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        min-width: 0;
-      }
-
-      .ad-hamburger {
-        position: relative;
-        width: 58px;
-        height: 44px;
-        flex-shrink: 0;
-      }
-
-      .ad-hamburger span {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 9px;
-        background: #111;
-        border-radius: 12px;
-      }
-
-      .ad-hamburger span:nth-child(1) { top: 0; }
-      .ad-hamburger span:nth-child(2) { top: 16px; }
-      .ad-hamburger span:nth-child(3) { top: 32px; }
-
-      .ad-wordmark {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        line-height: 0.82;
-      }
-
-      .ad-wordmark strong {
-        display: inline-flex;
-        align-items: baseline;
-        font-size: clamp(2.9rem, 5vw, 7rem);
-        font-weight: 900;
-        letter-spacing: -0.08em;
-        color: #111;
-        text-shadow: 4px 4px 0 rgba(255,255,255,0.1);
-      }
-
-      .ad-wordmark strong .accent {
-        color: #e31a1a;
-      }
-
-      .ad-slogan {
-        margin-top: 8px;
-        font-size: clamp(0.88rem, 1.35vw, 1.55rem);
-        letter-spacing: -0.03em;
-        color: #111;
-        font-weight: 700;
-        font-style: italic;
-        white-space: nowrap;
-      }
-
-      .ad-machine {
-        position: relative;
-        width: 230px;
-        height: 240px;
-        flex-shrink: 0;
-        margin-left: 12px;
-      }
-
-      .ad-machine-body {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        width: 185px;
-        height: 190px;
-        background: linear-gradient(180deg, #f2f2f2 0%, #b2b2b2 100%);
-        border: 4px solid #111;
-        border-radius: 10px 10px 0 0;
-        box-shadow: inset 0 0 0 5px #7a7a7a;
-      }
-
-      .ad-machine-top {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 180px;
-        width: 185px;
-        height: 20px;
-        background: #d7d7d7;
-        border: 4px solid #111;
-        border-bottom: none;
-      }
-
-      .ad-screen {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 195px;
-        width: 150px;
-        height: 110px;
-        background: linear-gradient(180deg, #efe7db 0%, #d9d9d9 100%);
-        border: 4px solid #111;
-        border-radius: 12px 12px 0 0;
-      }
-
-      .ad-screen::before {
-        content: "";
-        position: absolute;
-        inset: 14px 12px 18px;
-        border-radius: 8px;
-        background: linear-gradient(180deg, #dbdcdc 0%, #8a8a8a 100%);
-      }
-
-      .ad-machine-body::before,
-      .ad-machine-body::after {
-        content: "";
-        position: absolute;
-        bottom: 36px;
-        width: 18px;
-        height: 26px;
-        background: #111;
-        border-radius: 4px;
-      }
-
-      .ad-machine-body::before { left: 22px; }
-      .ad-machine-body::after { right: 22px; }
-
-      .ad-machine .ad-control {
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        background: #111;
-        border-radius: 50%;
-        bottom: 18px;
-      }
-
-      .ad-machine .ad-control:nth-of-type(1) { left: 44px; }
-      .ad-machine .ad-control:nth-of-type(2) { left: 64px; }
-      .ad-machine .ad-control:nth-of-type(3) { right: 44px; }
-      .ad-machine .ad-control:nth-of-type(4) { right: 64px; }
-
-      .ad-machine .ad-button {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: #111;
-        bottom: 50px;
-      }
-
-      .ad-machine .ad-button:nth-of-type(5) { left: 62px; }
-      .ad-machine .ad-button:nth-of-type(6) { right: 62px; }
-
-      .ad-copy {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 0;
-      }
-
-      .ad-headline {
-        max-width: 660px;
-        font-weight: 900;
-        font-size: clamp(1.8rem, 2.7vw, 4.2rem);
-        line-height: 0.96;
-        letter-spacing: -0.07em;
-        color: #111;
-        text-align: left;
-      }
-
-      .ad-headline .accent {
-        color: #e31a1a;
-      }
-
-      .ad-cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 14px;
-        padding: 20px 32px;
-        border-radius: 999px;
-        background: #e31a1a;
-        border: 4px solid #111;
-        box-shadow: 0 6px 0 rgba(17,17,17,0.25);
-        font-weight: 900;
-        font-size: clamp(1.2rem, 2vw, 2.5rem);
-        letter-spacing: -0.04em;
-        color: #fff;
-      }
-
-      .ad-side {
-        position: relative;
-        width: 270px;
-        height: 220px;
-        flex-shrink: 0;
-      }
-
-      .ad-greeting {
-        position: absolute;
-        right: 45px;
-        top: 16px;
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-        border: 8px solid #111;
-        background: #e31a1a;
-        box-shadow: inset 0 0 0 8px #f7f7f7;
-      }
-
-      .ad-greeting::before,
-      .ad-greeting::after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        border-radius: 50%;
-        top: 26px;
-      }
-
-      .ad-greeting::before { left: 30px; }
-      .ad-greeting::after { right: 30px; }
-
-      .ad-star {
-        position: absolute;
-        right: 55px;
-        top: 24px;
-        width: 0;
-        height: 0;
-        border-left: 16px solid transparent;
-        border-right: 16px solid transparent;
-        border-bottom: 32px solid #111;
-        transform: rotate(35deg);
-      }
-
-      .ad-star::before {
-        content: "";
-        position: absolute;
-        left: -16px;
-        top: -8px;
-        width: 0;
-        height: 0;
-        border-left: 16px solid transparent;
-        border-right: 16px solid transparent;
-        border-bottom: 32px solid #111;
-        transform: rotate(-70deg);
-      }
-
-      .ad-star::after {
-        content: "";
-        position: absolute;
-        left: -16px;
-        top: -8px;
-        width: 0;
-        height: 0;
-        border-left: 16px solid transparent;
-        border-right: 16px solid transparent;
-        border-bottom: 32px solid #111;
-        transform: rotate(70deg);
-      }
-
-      .ad-rocket {
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        width: 150px;
-        height: 120px;
-      }
-
-      .ad-rocket::before {
-        content: "";
-        position: absolute;
-        left: 26px;
-        bottom: 0;
-        width: 60px;
-        height: 80px;
-        background: #fff;
-        border: 4px solid #111;
-        border-radius: 10px 10px 20px 20px;
-      }
-
-      .ad-rocket::after {
-        content: "";
-        position: absolute;
-        left: 40px;
-        bottom: 70px;
-        width: 32px;
-        height: 32px;
-        background: #111;
-        border-radius: 50%;
-      }
-
-      .ad-ribbon {
-        position: absolute;
-        left: 38px;
-        bottom: 42px;
-        width: 112px;
-        height: 90px;
-        border-radius: 80% 80% 40% 40%;
-        background: #f7f7f7;
-        border: 4px solid #111;
-        transform: rotate(-10deg);
-      }
-
-      .ad-ribbon::before,
-      .ad-ribbon::after {
-        content: "";
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        background: #e31a1a;
-        border-radius: 50%;
-        top: 16px;
-      }
-
-      .ad-ribbon::before { left: 18px; }
-      .ad-ribbon::after { right: 18px; }
-
-      .ad-ball {
-        position: absolute;
-        left: 70px;
-        bottom: 20px;
-        width: 62px;
-        height: 62px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 35% 30%, #fff 0%, #e5e5e5 18%, #d5d5d5 35%, #b7b7b7 60%, #8f8f8f 100%);
-        border: 4px solid #111;
-      }
-
-      .ad-ball::before {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: rgba(0,0,0,0.15);
-        right: 12px;
-        top: 12px;
-      }
-
-      .ad-bowling-pin {
-        position: absolute;
-        left: 110px;
-        bottom: 24px;
-        width: 52px;
-        height: 80px;
-        background: linear-gradient(180deg, #f2f2f2 0%, #d8d8d8 100%);
-        border: 4px solid #111;
-        border-radius: 14px 14px 20px 20px;
-      }
-
-      .ad-bowling-pin::before {
-        content: "";
-        position: absolute;
-        left: 15px;
-        top: -18px;
-        width: 18px;
-        height: 24px;
-        background: #f5f5f5;
-        border: 4px solid #111;
-        border-bottom: none;
-        border-radius: 8px 8px 0 0;
-      }
-
-      .ad-bowling-pin::after {
-        content: "";
-        position: absolute;
-        left: 18px;
-        top: 22px;
-        width: 10px;
-        height: 32px;
-        background: #111;
-        border-radius: 14px;
-      }
-
-      .ad-confetti {
-        position: absolute;
-        right: 120px;
-        bottom: 20px;
-        width: 16px;
-        height: 16px;
-        background: #ffef5a;
-        transform: rotate(32deg);
-        box-shadow: 0 0 0 2px rgba(17,17,17,0.12);
-      }
-
-      .ad-confetti:nth-child(1) { right: 110px; bottom: 50px; background: #f5d55e; }
-      .ad-confetti:nth-child(2) { right: 160px; bottom: 40px; background: #ffb4b4; }
-      .ad-confetti:nth-child(3) { right: 90px; bottom: 70px; background: #d8f8ff; }
-      .ad-confetti:nth-child(4) { right: 180px; bottom: 90px; background: #f0f0f0; }
-
       @media (max-width: 940px) {
-        .hero,
-        .main-grid,
-        .feature-strip,
-        .cards {
-          grid-template-columns: 1fr;
-        }
-
+        .hero, .main-grid, .feature-strip, .cards { grid-template-columns: 1fr; }
         .hero-visual {
           border-left: none;
           border-top: 3px solid var(--ink);
         }
-
         .content-column {
           border-right: none;
           border-bottom: 3px solid var(--ink);
         }
-
-        .topbar {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .ad-hero {
-          flex-wrap: wrap;
-          justify-content: center;
-          text-align: center;
-          padding-top: 18px;
-        }
-
-        .ad-copy {
-          width: 100%;
-        }
-
-        .ad-headline {
-          text-align: center;
-        }
+        .topbar { flex-wrap: wrap; justify-content: center; }
       }
-
       @media (max-width: 560px) {
-        .page {
-          margin: 14px;
-        }
-
-        .topbar,
-        .hero-copy,
-        .content-column,
-        .sidebar,
-        footer {
+        .page { margin: 14px; }
+        .topbar, .hero-copy, .content-column, .sidebar, footer {
           padding-left: 18px;
           padding-right: 18px;
         }
-
-        .stats {
-          grid-template-columns: 1fr;
-        }
-
-        .cta-row {
-          flex-direction: column;
-        }
-
-        .button {
-          width: 100%;
-        }
-
-        .ad-brand {
-          flex-wrap: wrap;
-          justify-content: center;
-          text-align: center;
-        }
-
-        .ad-slogan {
-          white-space: normal;
-        }
-
-        .ad-side {
-          display: none;
-        }
+        .stats { grid-template-columns: 1fr; }
+        .cta-row { flex-direction: column; }
+        .button { width: 100%; }
       }
     </style>
   </head>
@@ -989,74 +439,23 @@
         <a class="top-action" href="#">Book Now</a>
       </header>
 
-      <section class="ad-hero" aria-label="PerfectGames ad banner">
-        <div class="ad-brand">
-          <div class="ad-hamburger" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="ad-wordmark">
-            <strong><span>Perfect</span><span class="accent">Games</span></strong>
-            <div class="ad-slogan">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</div>
-          </div>
-        </div>
-
-        <div class="ad-machine" aria-hidden="true">
-          <div class="ad-machine-top"></div>
-          <div class="ad-screen"></div>
-          <div class="ad-machine-body"></div>
-          <div class="ad-control"></div>
-          <div class="ad-control"></div>
-          <div class="ad-control"></div>
-          <div class="ad-control"></div>
-          <div class="ad-button"></div>
-          <div class="ad-button"></div>
-        </div>
-
-        <div class="ad-copy">
-          <div>
-            <div class="ad-headline">
-              Book your kids birthday party,<br />
-              group and <span class="accent">corporate events</span>,<br />
-              or rent the venue!
-            </div>
-            <div class="ad-cta">FILL OUT FORM TO GET STARTED!!!</div>
-          </div>
-        </div>
-
-        <div class="ad-side" aria-hidden="true">
-          <div class="ad-star"></div>
-          <div class="ad-greeting"></div>
-          <div class="ad-confetti"></div>
-          <div class="ad-confetti"></div>
-          <div class="ad-confetti"></div>
-          <div class="ad-confetti"></div>
-          <div class="ad-ball"></div>
-          <div class="ad-bowling-pin"></div>
-          <div class="ad-ribbon"></div>
-          <div class="ad-rocket"></div>
-        </div>
-      </section>
-
-      <section class="hero">
+      <section class="hero" aria-label="PerfectGames landing section">
         <div class="hero-copy">
-          <div class="eyebrow">New season</div>
-          <h1>Executive Summary</h1>
+          <div class="eyebrow">Now Booking</div>
+          <h1>Level up your game night.</h1>
           <p class="lead">
-            Discover top-rated experiences, exciting new releases, and gamer communities built around
-            the best titles in the industry.
+            Discover the best arcade, lounge, and competitive gaming experiences in one place.
+            Book your spot, explore new releases, and stay ahead of the scene.
           </p>
 
           <div class="cta-row">
-            <a href="#" class="button primary">Browse Games</a>
-            <a href="#" class="button secondary">Read Reviews</a>
+            <a class="button primary" href="#">Explore Games</a>
+            <a class="button secondary" href="#">View Reviews</a>
           </div>
 
-          <div class="stats">
+          <div class="stats" aria-label="Company statistics">
             <div class="stat">
-              <strong>1200+</strong>
+              <strong>120+</strong>
               <span>Games</span>
             </div>
             <div class="stat">
@@ -1064,60 +463,60 @@
               <span>Rating</span>
             </div>
             <div class="stat">
-              <strong>24k</strong>
-              <span>Players</span>
+              <strong>24/7</strong>
+              <span>Access</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Featured game preview">
+        <div class="hero-visual" aria-label="Featured game panel">
           <div class="game-panel">
             <div class="game-card">
               <div class="mini-header">
                 <span>Featured</span>
-                <span>Now live</span>
+                <span>New drop</span>
               </div>
-              <div class="cover">Apex</div>
+              <div class="cover">Nightfall</div>
               <div class="game-meta">
-                <strong>Neon Strike</strong>
-                <span class="badge">Action</span>
+                <span>Arcade thrill</span>
+                <span class="badge">4 players</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="feature-strip" aria-label="Platform highlights">
-        <div class="feature">
-          <h3>Curated picks</h3>
-          <p>Hand-picked games selected for quality, replay value, and strong community support.</p>
-        </div>
-        <div class="feature">
-          <h3>Fast updates</h3>
-          <p>Get first access to release news, patch notes, and trending gaming events.</p>
-        </div>
-        <div class="feature">
-          <h3>Player community</h3>
-          <p>Connect with players, share recommendations, and keep up with the latest discussions.</p>
-        </div>
+      <section class="feature-strip" aria-label="Key features">
+        <article class="feature">
+          <h3>Premium Setup</h3>
+          <p>High-performance PCs, immersive displays, and premium seating for every session.</p>
+        </article>
+        <article class="feature">
+          <h3>Live Events</h3>
+          <p>Join tournaments, launch nights, and exclusive community events every week.</p>
+        </article>
+        <article class="feature">
+          <h3>Fast Access</h3>
+          <p>Reserve your favorite games and skip the wait with simple online bookings.</p>
+        </article>
       </section>
 
       <main class="main-grid">
         <section class="content-column">
           <div class="section-header">
-            <h2>Featured games</h2>
-            <a href="#">View all</a>
+            <h2>Featured titles</h2>
+            <a href="#">See all</a>
           </div>
 
           <div class="cards">
             <article class="game-item">
               <div class="thumb one"></div>
               <div class="game-info">
-                <h3>Starlight Run</h3>
-                <p>High-speed racing with handcrafted tracks and tactical power boosts.</p>
+                <h3>Velocity</h3>
+                <p>Fast-paced racing action with precision controls and bold arena energy.</p>
                 <div class="meta-row">
                   <span>Racing</span>
-                  <span class="pill">4.8</span>
+                  <span class="pill">Top</span>
                 </div>
               </div>
             </article>
@@ -1125,11 +524,11 @@
             <article class="game-item">
               <div class="thumb two"></div>
               <div class="game-info">
-                <h3>Shadow Realm</h3>
-                <p>Explore ancient ruins, solve puzzles, and defeat enemies in a dark fantasy world.</p>
+                <h3>Steel Run</h3>
+                <p>A tactical combat challenge built for strategy-focused players and teams.</p>
                 <div class="meta-row">
-                  <span>Adventure</span>
-                  <span class="pill">4.9</span>
+                  <span>Action</span>
+                  <span class="pill">Hot</span>
                 </div>
               </div>
             </article>
@@ -1137,11 +536,11 @@
             <article class="game-item">
               <div class="thumb three"></div>
               <div class="game-info">
-                <h3>Wildfront</h3>
-                <p>Build your base, survive the wilderness, and compete in epic world events.</p>
+                <h3>Nova Drift</h3>
+                <p>Explore a neon-lit universe filled with intensity, upgrades, and momentum.</p>
                 <div class="meta-row">
-                  <span>Survival</span>
-                  <span class="pill">4.7</span>
+                  <span>Adventure</span>
+                  <span class="pill">New</span>
                 </div>
               </div>
             </article>
@@ -1149,11 +548,11 @@
             <article class="game-item">
               <div class="thumb four"></div>
               <div class="game-info">
-                <h3>Velocity 9</h3>
-                <p>Fast-paced tactical shooting built for duo play and competitive rankings.</p>
+                <h3>Backroom</h3>
+                <p>Sneak, survive, and outsmart your rivals in one of the most tense titles around.</p>
                 <div class="meta-row">
-                  <span>FPS</span>
-                  <span class="pill">4.8</span>
+                  <span>Survival</span>
+                  <span class="pill">Live</span>
                 </div>
               </div>
             </article>
@@ -1164,28 +563,31 @@
           <div class="side-card">
             <h3>Trending</h3>
             <ul class="trend-list">
-              <li><span>Cyber Drift</span><span>+34%</span></li>
-              <li><span>Season Pass</span><span>New</span></li>
-              <li><span>Co-op Picks</span><span>Hot</span></li>
-              <li><span>Steam Deals</span><span>12</span></li>
+              <li><span>Co-op nights</span><span>18</span></li>
+              <li><span>Esports week</span><span>12</span></li>
+              <li><span>Retro nights</span><span>9</span></li>
             </ul>
           </div>
 
           <div class="side-card">
             <h3>Newsletter</h3>
             <div class="newsletter">
-              <input type="email" placeholder="Enter your email" aria-label="Email address" />
-              <button type="button">Subscribe</button>
+              <input type="email" placeholder="Email address" aria-label="Email address" />
+              <button type="button">Join now</button>
             </div>
           </div>
         </aside>
       </main>
 
       <footer>
-        <div>© 2026 PerfectGames</div>
+        <div class="brand">
+          <div class="logo-mark">PG</div>
+          <div class="brand-name">PerfectGames</div>
+        </div>
+
         <div class="footer-links">
+          <a href="#">Terms</a>
           <a href="#">Privacy</a>
-          <a href="#">Contact</a>
           <a href="#">Support</a>
         </div>
       </footer>
