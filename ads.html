@@ -1,121 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfect Games 728x90</title>
-    <style>
-      :root {
-        --bg: #c5c5c5;
-        --red: #eb1f1f;
-        --dark-red: #d81313;
-        --black: #151515;
-        --white: #f8f8f8;
-      }
-
-      * { box-sizing: border-box; }
-      html, body {
-        margin: 0;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfect Games | Ad Layout</title>
+  <style>
+    :root {
+      --ad-red: #e56568;
+      --ad-shadow: #b95457;
+      --page: #fff;
+      --gap: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--page);
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 34px 24px;
+    }
+    .ad-layout {
+      width: max-content;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .banner-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .columns {
+      display: grid;
+      grid-template-columns: 160px 336px 300px;
+      gap: var(--gap);
+      align-items: start;
+    }
+    .middle-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .ad-slot {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex: none;
+      background: var(--ad-red);
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.15;
+      text-shadow: 0 1px 2px rgba(0,0,0,.12);
+      isolation: isolate;
+    }
+    .ad-slot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(35deg, transparent 0 48%, rgba(165,65,69,.34) 48.2% 100%);
+    }
+    .ad-slot::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(115deg, rgba(177,70,73,.25), transparent 55%);
+    }
+    .banner { width: 728px; height: 90px; }
+    .mobile-banner { width: 320px; height: 50px; }
+    .medium-rectangle { width: 300px; height: 250px; }
+    .large-rectangle { width: 336px; height: 280px; }
+    .skyscraper { width: 160px; height: 600px; }
+    .wide-skyscraper { width: 300px; height: 600px; }
+    .skyscraper, .wide-skyscraper { font-size: 32px; }
+    @media (max-width: 900px) {
+      body { padding: 24px 16px; }
+      .ad-layout {
         width: 100%;
-        min-height: 100%;
-        background: var(--bg);
-        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: auto;
+        padding-bottom: 8px;
       }
-      body {
-        display: grid;
-        place-items: center;
-        min-height: 100vh;
-      }
-      .frame {
-        width: 728px;
-        height: 90px;
-        background: var(--bg);
-        overflow: hidden;
-      }
-      svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="frame">
-      <svg viewBox="0 0 728 90" role="img" aria-label="Perfect Games banner">
-        <defs>
-          <linearGradient id="ctaGrad" x1="0" x2="1">
-            <stop offset="0%" stop-color="#ef1d1d" />
-            <stop offset="100%" stop-color="#d71414" />
-          </linearGradient>
-        </defs>
-
-        <rect width="728" height="90" fill="#c5c5c5"/>
-
-        <!-- left logo -->
-        <g>
-          <text x="18" y="42" font-size="36" font-weight="900" fill="#ef1d1d" stroke="#111111" stroke-width="2.3" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" letter-spacing="-1.8">Perfect Games</text>
-          <path d="M12 54 H240" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <text x="18" y="76" font-size="12.5" font-weight="700" fill="#111111" font-family="Arial, Helvetica, sans-serif" letter-spacing="0.25">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</text>
-        </g>
-
-        <!-- arcade machine -->
-        <g transform="translate(300,8)">
-          <rect x="0" y="7" width="72" height="54" fill="#d6d6d6" stroke="#3a3a3a" stroke-width="2.5"/>
-          <rect x="8" y="16" width="56" height="30" fill="#ebddd7" stroke="#363636" stroke-width="2"/>
-          <rect x="12" y="0" width="48" height="8" fill="#d1d1d1" stroke="#3b3b3b" stroke-width="1.5"/>
-
-          <circle cx="12" cy="63" r="4" fill="#2a2a2a"/>
-          <circle cx="34" cy="63" r="4" fill="#2a2a2a"/>
-          <circle cx="56" cy="63" r="4" fill="#2a2a2a"/>
-          <path d="M0 67 H72" stroke="#171717" stroke-width="2" fill="none"/>
-
-          <rect x="22" y="46" width="28" height="15" fill="#2a2a2a"/>
-          <path d="M35 58 H52" stroke="#171717" stroke-width="2.4" fill="none"/>
-
-          <circle cx="58" cy="31" r="7" fill="#f1f1f1" stroke="#171717" stroke-width="1.5"/>
-          <circle cx="58" cy="31" r="2.5" fill="#b8b8b8"/>
-          <path d="M58 22 L66 31 L58 39" stroke="#171717" stroke-width="1.5" fill="none"/>
-          <path d="M72 22 L78 27 L74 32" stroke="#171717" stroke-width="1.5" fill="none"/>
-        </g>
-
-        <!-- bowling pin + ball -->
-        <g transform="translate(395,18)">
-          <g>
-            <path d="M0 24 L18 24 L18 8 L30 8 L30 24 L48 24 L48 12 L60 12 L60 24 L78 24 L78 0 L90 0 L90 24" stroke="#111111" stroke-width="1.8" fill="none"/>
-            <circle cx="28" cy="35" r="2.4" fill="#111111"/>
-          </g>
-
-          <g transform="translate(62,12)">
-            <circle cx="0" cy="18" r="15" fill="#f7f7f7" stroke="#111111" stroke-width="2"/>
-            <path d="M-10 18 Q0 7 10 18" stroke="#111111" stroke-width="2" fill="none"/>
-            <path d="M-8 18 L-2 13 M8 18 L2 13" stroke="#111111" stroke-width="2" fill="none"/>
-          </g>
-        </g>
-
-        <!-- middle text -->
-        <g transform="translate(470,14)">
-          <text x="0" y="0" font-size="14" font-weight="900" fill="#111111" font-family="Arial, Helvetica, sans-serif" letter-spacing="-0.45">Book your kids birthday party, group and</text>
-          <text x="0" y="22" font-size="14" font-weight="900" fill="#111111" font-family="Arial, Helvetica, sans-serif" letter-spacing="-0.45">corporate events, or rent the venue!</text>
-        </g>
-
-        <!-- CTA -->
-        <g transform="translate(486,52)">
-          <rect x="0" y="0" width="220" height="27" rx="13.5" fill="url(#ctaGrad)" stroke="#111111" stroke-width="2"/>
-          <text x="110" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" letter-spacing="0.15">FILL OUT FORM TO GET STARTED!!!</text>
-        </g>
-
-        <!-- party decorations -->
-        <g transform="translate(683,8)">
-          <path d="M14 0 L20 18 L38 18 L24 28 L29 46 L14 34 L-1 46 L4 28 L-10 18 L8 18 Z" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
-          <path d="M14 0 L14 46" stroke="#111111" stroke-width="1.5" fill="none"/>
-        </g>
-        <g transform="translate(680,20)">
-          <path d="M8 0 L12 12 L24 13 L15 20 L18 33 L8 26 L-2 33 L1 20 L-8 13 L4 12 Z" fill="#ffffff" stroke="#111111" stroke-width="1.2"/>
-        </g>
-        <g transform="translate(699,8)">
-          <path d="M12 0 L16 12 L28 14 L18 22 L22 34 L12 28 L2 34 L6 22 L-4 14 L8 12 Z" fill="#ffffff" stroke="#111111" stroke-width="1.2"/>
-        </g>
-      </svg>
+      .banner-row, .columns { width: 828px; }
+    }
+    @media (max-width: 520px) {
+      body { padding: 20px 12px; }
+      .ad-slot { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="ad-layout" aria-label="Perfect Games advertising layout">
+    <div class="banner-row">
+      <div class="ad-slot banner" aria-label="728 by 90 banner advertisement">728x90</div>
     </div>
-  </body>
+    <section class="columns" aria-label="Advertisement placements">
+      <div class="ad-slot skyscraper" aria-label="160 by 600 skyscraper advertisement">160<br />x600</div>
+      <div class="middle-column">
+        <div class="ad-slot mobile-banner" aria-label="320 by 50 mobile banner advertisement">320x50</div>
+        <div class="ad-slot medium-rectangle" aria-label="300 by 250 rectangle advertisement">300x250</div>
+        <div class="ad-slot large-rectangle" aria-label="336 by 280 large rectangle advertisement">336x280</div>
+      </div>
+      <div class="ad-slot wide-skyscraper" aria-label="300 by 600 wide skyscraper advertisement">300<br />x600</div>
+    </section>
+  </main>
+</body>
 </html>
