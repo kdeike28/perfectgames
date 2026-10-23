@@ -484,6 +484,411 @@
         font-weight: 700;
       }
 
+      .ad-hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px 26px 20px;
+        width: 100%;
+        min-height: 230px;
+        background: #c4c4c4;
+        border-bottom: 3px solid var(--ink);
+        overflow: hidden;
+      }
+
+      .ad-brand {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        min-width: 0;
+      }
+
+      .ad-hamburger {
+        position: relative;
+        width: 58px;
+        height: 44px;
+        flex-shrink: 0;
+      }
+
+      .ad-hamburger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 9px;
+        background: #111;
+        border-radius: 12px;
+      }
+
+      .ad-hamburger span:nth-child(1) { top: 0; }
+      .ad-hamburger span:nth-child(2) { top: 16px; }
+      .ad-hamburger span:nth-child(3) { top: 32px; }
+
+      .ad-wordmark {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        line-height: 0.82;
+      }
+
+      .ad-wordmark strong {
+        display: inline-flex;
+        align-items: baseline;
+        font-size: clamp(2.9rem, 5vw, 7rem);
+        font-weight: 900;
+        letter-spacing: -0.08em;
+        color: #111;
+        text-shadow: 4px 4px 0 rgba(255,255,255,0.1);
+      }
+
+      .ad-wordmark strong .accent {
+        color: #e31a1a;
+      }
+
+      .ad-slogan {
+        margin-top: 8px;
+        font-size: clamp(0.88rem, 1.35vw, 1.55rem);
+        letter-spacing: -0.03em;
+        color: #111;
+        font-weight: 700;
+        font-style: italic;
+        white-space: nowrap;
+      }
+
+      .ad-machine {
+        position: relative;
+        width: 230px;
+        height: 240px;
+        flex-shrink: 0;
+        margin-left: 12px;
+      }
+
+      .ad-machine-body {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 185px;
+        height: 190px;
+        background: linear-gradient(180deg, #f2f2f2 0%, #b2b2b2 100%);
+        border: 4px solid #111;
+        border-radius: 10px 10px 0 0;
+        box-shadow: inset 0 0 0 5px #7a7a7a;
+      }
+
+      .ad-machine-top {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 180px;
+        width: 185px;
+        height: 20px;
+        background: #d7d7d7;
+        border: 4px solid #111;
+        border-bottom: none;
+      }
+
+      .ad-screen {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 195px;
+        width: 150px;
+        height: 110px;
+        background: linear-gradient(180deg, #efe7db 0%, #d9d9d9 100%);
+        border: 4px solid #111;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .ad-screen::before {
+        content: "";
+        position: absolute;
+        inset: 14px 12px 18px;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #dbdcdc 0%, #8a8a8a 100%);
+      }
+
+      .ad-machine-body::before,
+      .ad-machine-body::after {
+        content: "";
+        position: absolute;
+        bottom: 36px;
+        width: 18px;
+        height: 26px;
+        background: #111;
+        border-radius: 4px;
+      }
+
+      .ad-machine-body::before { left: 22px; }
+      .ad-machine-body::after { right: 22px; }
+
+      .ad-machine .ad-control {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: #111;
+        border-radius: 50%;
+        bottom: 18px;
+      }
+
+      .ad-machine .ad-control:nth-of-type(1) { left: 44px; }
+      .ad-machine .ad-control:nth-of-type(2) { left: 64px; }
+      .ad-machine .ad-control:nth-of-type(3) { right: 44px; }
+      .ad-machine .ad-control:nth-of-type(4) { right: 64px; }
+
+      .ad-machine .ad-button {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #111;
+        bottom: 50px;
+      }
+
+      .ad-machine .ad-button:nth-of-type(5) { left: 62px; }
+      .ad-machine .ad-button:nth-of-type(6) { right: 62px; }
+
+      .ad-copy {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .ad-headline {
+        max-width: 660px;
+        font-weight: 900;
+        font-size: clamp(1.8rem, 2.7vw, 4.2rem);
+        line-height: 0.96;
+        letter-spacing: -0.07em;
+        color: #111;
+        text-align: left;
+      }
+
+      .ad-headline .accent {
+        color: #e31a1a;
+      }
+
+      .ad-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 14px;
+        padding: 20px 32px;
+        border-radius: 999px;
+        background: #e31a1a;
+        border: 4px solid #111;
+        box-shadow: 0 6px 0 rgba(17,17,17,0.25);
+        font-weight: 900;
+        font-size: clamp(1.2rem, 2vw, 2.5rem);
+        letter-spacing: -0.04em;
+        color: #fff;
+      }
+
+      .ad-side {
+        position: relative;
+        width: 270px;
+        height: 220px;
+        flex-shrink: 0;
+      }
+
+      .ad-greeting {
+        position: absolute;
+        right: 45px;
+        top: 16px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 8px solid #111;
+        background: #e31a1a;
+        box-shadow: inset 0 0 0 8px #f7f7f7;
+      }
+
+      .ad-greeting::before,
+      .ad-greeting::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+        top: 26px;
+      }
+
+      .ad-greeting::before { left: 30px; }
+      .ad-greeting::after { right: 30px; }
+
+      .ad-star {
+        position: absolute;
+        right: 55px;
+        top: 24px;
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 32px solid #111;
+        transform: rotate(35deg);
+      }
+
+      .ad-star::before {
+        content: "";
+        position: absolute;
+        left: -16px;
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 32px solid #111;
+        transform: rotate(-70deg);
+      }
+
+      .ad-star::after {
+        content: "";
+        position: absolute;
+        left: -16px;
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-bottom: 32px solid #111;
+        transform: rotate(70deg);
+      }
+
+      .ad-rocket {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 150px;
+        height: 120px;
+      }
+
+      .ad-rocket::before {
+        content: "";
+        position: absolute;
+        left: 26px;
+        bottom: 0;
+        width: 60px;
+        height: 80px;
+        background: #fff;
+        border: 4px solid #111;
+        border-radius: 10px 10px 20px 20px;
+      }
+
+      .ad-rocket::after {
+        content: "";
+        position: absolute;
+        left: 40px;
+        bottom: 70px;
+        width: 32px;
+        height: 32px;
+        background: #111;
+        border-radius: 50%;
+      }
+
+      .ad-ribbon {
+        position: absolute;
+        left: 38px;
+        bottom: 42px;
+        width: 112px;
+        height: 90px;
+        border-radius: 80% 80% 40% 40%;
+        background: #f7f7f7;
+        border: 4px solid #111;
+        transform: rotate(-10deg);
+      }
+
+      .ad-ribbon::before,
+      .ad-ribbon::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #e31a1a;
+        border-radius: 50%;
+        top: 16px;
+      }
+
+      .ad-ribbon::before { left: 18px; }
+      .ad-ribbon::after { right: 18px; }
+
+      .ad-ball {
+        position: absolute;
+        left: 70px;
+        bottom: 20px;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #fff 0%, #e5e5e5 18%, #d5d5d5 35%, #b7b7b7 60%, #8f8f8f 100%);
+        border: 4px solid #111;
+      }
+
+      .ad-ball::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.15);
+        right: 12px;
+        top: 12px;
+      }
+
+      .ad-bowling-pin {
+        position: absolute;
+        left: 110px;
+        bottom: 24px;
+        width: 52px;
+        height: 80px;
+        background: linear-gradient(180deg, #f2f2f2 0%, #d8d8d8 100%);
+        border: 4px solid #111;
+        border-radius: 14px 14px 20px 20px;
+      }
+
+      .ad-bowling-pin::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: -18px;
+        width: 18px;
+        height: 24px;
+        background: #f5f5f5;
+        border: 4px solid #111;
+        border-bottom: none;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .ad-bowling-pin::after {
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 22px;
+        width: 10px;
+        height: 32px;
+        background: #111;
+        border-radius: 14px;
+      }
+
+      .ad-confetti {
+        position: absolute;
+        right: 120px;
+        bottom: 20px;
+        width: 16px;
+        height: 16px;
+        background: #ffef5a;
+        transform: rotate(32deg);
+        box-shadow: 0 0 0 2px rgba(17,17,17,0.12);
+      }
+
+      .ad-confetti:nth-child(1) { right: 110px; bottom: 50px; background: #f5d55e; }
+      .ad-confetti:nth-child(2) { right: 160px; bottom: 40px; background: #ffb4b4; }
+      .ad-confetti:nth-child(3) { right: 90px; bottom: 70px; background: #d8f8ff; }
+      .ad-confetti:nth-child(4) { right: 180px; bottom: 90px; background: #f0f0f0; }
+
       @media (max-width: 940px) {
         .hero,
         .main-grid,
@@ -505,6 +910,21 @@
         .topbar {
           flex-wrap: wrap;
           justify-content: center;
+        }
+
+        .ad-hero {
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+          padding-top: 18px;
+        }
+
+        .ad-copy {
+          width: 100%;
+        }
+
+        .ad-headline {
+          text-align: center;
         }
       }
 
@@ -533,6 +953,20 @@
         .button {
           width: 100%;
         }
+
+        .ad-brand {
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .ad-slogan {
+          white-space: normal;
+        }
+
+        .ad-side {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -554,6 +988,57 @@
 
         <a class="top-action" href="#">Book Now</a>
       </header>
+
+      <section class="ad-hero" aria-label="PerfectGames ad banner">
+        <div class="ad-brand">
+          <div class="ad-hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="ad-wordmark">
+            <strong><span>Perfect</span><span class="accent">Games</span></strong>
+            <div class="ad-slogan">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</div>
+          </div>
+        </div>
+
+        <div class="ad-machine" aria-hidden="true">
+          <div class="ad-machine-top"></div>
+          <div class="ad-screen"></div>
+          <div class="ad-machine-body"></div>
+          <div class="ad-control"></div>
+          <div class="ad-control"></div>
+          <div class="ad-control"></div>
+          <div class="ad-control"></div>
+          <div class="ad-button"></div>
+          <div class="ad-button"></div>
+        </div>
+
+        <div class="ad-copy">
+          <div>
+            <div class="ad-headline">
+              Book your kids birthday party,<br />
+              group and <span class="accent">corporate events</span>,<br />
+              or rent the venue!
+            </div>
+            <div class="ad-cta">FILL OUT FORM TO GET STARTED!!!</div>
+          </div>
+        </div>
+
+        <div class="ad-side" aria-hidden="true">
+          <div class="ad-star"></div>
+          <div class="ad-greeting"></div>
+          <div class="ad-confetti"></div>
+          <div class="ad-confetti"></div>
+          <div class="ad-confetti"></div>
+          <div class="ad-confetti"></div>
+          <div class="ad-ball"></div>
+          <div class="ad-bowling-pin"></div>
+          <div class="ad-ribbon"></div>
+          <div class="ad-rocket"></div>
+        </div>
+      </section>
 
       <section class="hero">
         <div class="hero-copy">
