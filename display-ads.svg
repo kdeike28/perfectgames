@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="728" height="90" viewBox="0 0 728 90">
+<rect width="728" height="90" fill="#d4d4d4"/>
+<g transform="translate(14 23)">
+ <path d="M0 25 L190 25 Q205 25 205 12 Q205 0 192 0" fill="none" stroke="#111" stroke-width="2"/>
+ <text x="19" y="25" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="900" font-style="italic" fill="#ed1515" stroke="#111" stroke-width=".7" paint-order="stroke">Perfect Games</text>
+ <text x="188" y="24" font-size="22" font-family="Arial" font-weight="bold" fill="#111">:)</text>
+ <path d="M0 29 H203" stroke="#111" stroke-width="2"/>
+ <text x="0" y="39" font-family="Arial" font-size="9.5" font-weight="bold" font-style="italic" fill="#111">Bowling - Laser Tag - Arcade - Pizza - Sports Bar</text>
+</g>
+<g transform="translate(239 15)">
+ <rect x="1" y="1" width="32" height="7" fill="#f6f6f6" stroke="#777" stroke-width="2"/>
+ <rect x="4" y="9" width="26" height="33" fill="#bbb" stroke="#666" stroke-width="2"/>
+ <rect x="8" y="14" width="18" height="17" fill="#777" stroke="#333" stroke-width="1.5"/>
+ <path d="M10 18 L24 18 M10 22 L24 22 M10 26 L24 26" stroke="#ddd" stroke-width="1"/>
+ <rect x="8" y="42" width="18" height="22" fill="#aaa" stroke="#555" stroke-width="2"/>
+ <rect x="12" y="47" width="10" height="5" fill="#555"/>
+ <path d="M0 64 H34" stroke="#555" stroke-width="2"/>
+</g>
+<g transform="translate(300 39)">
+ <path d="M4 0 C2 0 2 6 3 11 L0 28 Q4 34 9 28 L6 11 C7 6 7 0 4 0Z" fill="#fff" stroke="#111" stroke-width="1.2"/>
+ <path d="M2 7 H7 M1 10 H7" stroke="#ed1717" stroke-width="2"/>
+</g>
+<g transform="translate(334 56)">
+ <circle cx="0" cy="0" r="12" fill="#ed252b"/><circle cx="-4" cy="-5" r="2" fill="#b81319"/><circle cx="5" cy="3" r="2" fill="#b81319"/>
+</g>
+<g transform="translate(324 18)" fill="#080808">
+ <text x="0" y="12" font-family="Arial" font-size="15" font-weight="900">Book your kids birthday party, group and</text>
+ <text x="19" y="29" font-family="Arial" font-size="15" font-weight="900">corporate events, or rent the venue!</text>
+</g>
+<g transform="translate(375 59)">
+ <rect width="186" height="25" rx="13" fill="#ef1717"/>
+ <text x="93" y="16.5" font-family="Arial" font-size="11.5" font-weight="900" text-anchor="middle" fill="#fff">FILL OUT FORM TO GET STARTED!!</text>
+</g>
+<g transform="translate(596 33)" stroke="#777" fill="none" stroke-width="1.3">
+ <path d="M3 12 L0 5 L8 8 L13 1 L15 9 L22 6 L19 14 L25 18 L16 18 L13 26 L9 19 L2 22 L5 15Z"/>
+ <path d="M10 31 L5 37 M17 30 L22 36 M4 28 L0 32"/>
+ <path d="M31 4 L38 11 M36 2 L33 14 M30 8 L42 7"/>
+</g>
+<g transform="translate(640 17)">
+ <path d="M23 0 L46 61 L0 61Z" fill="#f31919"/>
+ <path d="M23 0 L46 61 L0 61Z" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="2 6"/>
+ <path d="M17 0 Q23 -6 29 0" fill="none" stroke="#111" stroke-width="2"/>
+ <path d="M23 0 L23 -7 M15 4 L9 -1 M30 4 L37 -1 M23 8 L23 15 M13 9 L7 9 M32 9 L39 9" stroke="#111" stroke-width="2"/>
+</g>
+<g transform="translate(597 52)" fill="none" stroke="#888" stroke-width="1.5">
+ <path d="M0 20 L21 0 Q25 -4 29 0 Q33 4 29 8 L8 29 Q3 31 0 20Z"/>
+ <path d="M7 12 L17 22 M12 7 L22 17 M2 19 L10 27"/>
+ <path d="M0 31 L-2 37 M3 33 L8 37 M-3 28 L-9 29"/>
+</g>
+</svg>
