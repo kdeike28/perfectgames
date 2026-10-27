@@ -9,14 +9,14 @@
 html,body{margin:0;padding:0;background:#fff;font-family:Arial,Helvetica,sans-serif}
 .mockup{position:relative;width:100%;max-width:1600px;margin:0 auto;line-height:0}
 .mockup img{display:block;width:100%;height:auto}
-.field{position:absolute;line-height:normal;border:1px solid transparent;border-radius:5px;background:rgba(255,255,255,.03);color:#171717;font:inherit;font-size:clamp(9px,1.05vw,16px);padding:.6em .8em;min-width:0;min-height:0}
-.field::placeholder{color:#777;opacity:.9}
-.field:focus{outline:2px solid #ed171d;border-color:#ed171d;background:rgba(255,255,255,.96)}
+.field{position:absolute;line-height:normal;border:1px solid #a9aaac;border-radius:5px;background:rgba(255,255,255,.96);color:#171717;font-family:Arial,Helvetica,sans-serif;font-size:clamp(11px,1.05vw,16px);padding:0 12px;min-width:0;min-height:0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.field::placeholder{color:#858585;opacity:1}
+.field:focus{outline:2px solid #ed171d;border-color:#ed171d;background:#fff}
 .name{left:21.3%;top:46.1%;width:27.7%;height:4.3%}
 .email{left:51%;top:46.1%;width:27.7%;height:4.3%}
 .date{left:21.3%;top:56.7%;width:27.7%;height:4.4%}
-.time{left:51%;top:56.7%;width:27.7%;height:4.4%;background-color:rgba(255,255,255,.03)}
-.guests{left:21.3%;top:67.3%;width:57.4%;height:4.4%;background-color:rgba(255,255,255,.03)}
+.time{left:51%;top:56.7%;width:27.7%;height:4.4%;background-color:#fff}
+.guests{left:21.3%;top:67.3%;width:57.4%;height:4.4%;background-color:#fff}
 .submit{position:absolute;left:42.8%;top:73.6%;width:14.5%;height:5.2%;border:0;border-radius:999px;background:transparent;color:transparent;cursor:pointer}
 .submit:focus-visible{outline:3px solid #171717;outline-offset:2px}
 .nav-link{position:absolute;top:5.4%;height:4.1%;border-radius:999px}
@@ -24,7 +24,7 @@ html,body{margin:0;padding:0;background:#fff;font-family:Arial,Helvetica,sans-se
 .book-link{position:absolute;right:1.1%;top:4.7%;width:10%;height:5.4%;border-radius:999px}
 .brand-link{position:absolute;left:1.5%;top:1.5%;width:27.5%;height:11%}
 .status{position:absolute;left:50%;top:82%;transform:translateX(-50%);font-size:12px;color:#171717;background:#fff;padding:4px 8px;border-radius:4px;display:none;line-height:normal}
-@media(max-width:600px){.field{font-size:10px;padding:2px 4px}.status{font-size:10px}}
+@media(max-width:600px){.field{font-size:10px;padding:0 5px}.status{font-size:10px}}
 </style>
 </head>
 <body>
