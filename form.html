@@ -5,56 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form | PerfectGames</title>
     <style>
-      :root { --bg: #e7e7e7; --panel: #ffffff; --ink: #111111; --muted: #4d4d4d; --line: #d4d4d4; --accent: #d71920; --accent-dark: #a60d15; --accent-soft: #f6dfe0; --shadow: 0 18px 42px rgba(17, 17, 17, 0.08); }
+      :root { --bg: #dedede; --panel: #ffffff; --ink: #111111; --muted: #444444; --line: #c8c8c8; --accent: #ef171c; --accent-dark: #b90910; --accent-soft: #eeeeee; --shadow: 0 14px 34px rgba(17, 17, 17, 0.10); }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body { margin: 0; min-height: 100vh; background: linear-gradient(180deg, #dadada 0%, var(--bg) 100%); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
       a { color: inherit; text-decoration: none; }
-      .page { max-width: 1280px; margin: 28px auto; background: var(--panel); border: 3px solid var(--ink); box-shadow: var(--shadow); }
-      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 32px; border-bottom: 3px solid var(--ink); background: #f7f7f7; }
+      .page { max-width: 1280px; margin: 24px auto; background: var(--panel); border: 0; box-shadow: var(--shadow); }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 30px; border-bottom: 1px solid #c5c5c5; background: #dedede; }
       .brand { display: flex; align-items: center; gap: 16px; }
-      .logo-mark { width: 54px; height: 54px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: white; font-weight: 800; border: 3px solid var(--ink); border-radius: 12px; }
-      .brand-name { font-size: clamp(1.6rem, 2vw, 2.3rem); font-weight: 800; letter-spacing: -0.06em; }
-      .nav { display: flex; align-items: center; gap: 28px; font-weight: 700; flex-wrap: wrap; }
+      .logo-mark { width: 48px; height: 48px; display: grid; place-items: center; background: #eeeeee; color: var(--accent); font-weight: 900; border: 2px solid #777; border-radius: 4px; }
+      .brand-name { font-size: clamp(1.6rem, 2vw, 2.3rem); font-weight: 900; font-style: italic; color: var(--accent); letter-spacing: -0.06em; text-shadow: 1px 1px 0 #fff; }
+      .brand-tagline { margin-top: -2px; font-size: .7rem; font-weight: 800; font-style: italic; color: #222; white-space: nowrap; }
+      .party-icons { margin-top: 18px; font-size: clamp(1.4rem, 3vw, 2.2rem); letter-spacing: .08em; }
+      .nav { display: flex; align-items: center; gap: 24px; font-weight: 800; flex-wrap: wrap; }
       .nav a { position: relative; color: var(--ink); }
       .nav a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
       .nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); }
-      .top-action { padding: 12px 18px; border: 3px solid var(--ink); background: var(--ink); color: white; font-weight: 700; }
-      .hero { border-bottom: 3px solid var(--ink); background: linear-gradient(135deg, var(--accent-soft) 0%, #ffffff 100%); padding: 44px 42px 42px; }
-      .eyebrow { display: inline-block; margin-bottom: 18px; padding: 8px 12px; background: #111; color: white; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; }
-      h1 { margin: 0 0 18px; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 0.98; letter-spacing: -0.07em; }
+      .top-action { padding: 12px 20px; border: 2px solid var(--accent); border-radius: 999px; background: var(--accent); color: white; font-weight: 900; text-transform: uppercase; font-size: .82rem; }
+      .hero { border-bottom: 1px solid #c8c8c8; background: #dedede; padding: 36px 42px 40px; position: relative; overflow: hidden; }
+      .eyebrow { display: inline-block; margin-bottom: 14px; padding: 8px 13px; background: var(--accent); color: white; border-radius: 999px; font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 900; }
+      h1 { margin: 0 0 18px; font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: 0.98; letter-spacing: -0.065em; font-weight: 900; }
       .lead { max-width: 700px; margin: 0; color: var(--muted); font-size: 1.18rem; line-height: 1.55; }
       .content { padding: 38px 32px 42px; }
       .section-header { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
       .section-header h2 { margin: 0; font-size: clamp(2rem, 2.6vw, 3rem); letter-spacing: -0.06em; }
-      .form-panel { border: 3px solid var(--ink); background: #f8f8f8; padding: 22px; }
+      .form-panel { border: 1px solid #d0d0d0; background: #f3f3f3; padding: 22px; }
       .google-form { margin: 0; }
-      .google-form iframe { display: block; width: 100%; min-height: 900px; border: 3px solid var(--ink); background: #fff; }
-      .embed-help { padding: 22px; border: 3px dashed #b7b7b7; background: #fff; }
+      .google-form iframe { display: block; width: 100%; min-height: 900px; border: 1px solid #c9c9c9; background: #fff; }
+      .embed-help { padding: 22px; border: 1px dashed #aaa; background: #fff; }
       .embed-help h3 { margin: 0 0 10px; font-size: 1.4rem; letter-spacing: -0.04em; }
       .embed-help p { color: var(--muted); line-height: 1.55; }
       .embed-help code { overflow-wrap: anywhere; background: #f0f0f0; padding: 2px 5px; }
-      .open-form { display: inline-block; margin-top: 10px; padding: 12px 16px; background: var(--accent); border: 3px solid var(--accent); color: white; font-weight: 800; text-decoration: none; }
-      footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 32px; border-top: 3px solid var(--ink); background: #111; color: white; flex-wrap: wrap; }
-      .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-weight: 700; }
+      .open-form { display: inline-block; margin-top: 10px; padding: 12px 22px; background: var(--accent); border: 2px solid var(--accent); border-radius: 999px; color: white; font-weight: 900; text-transform: uppercase; text-decoration: none; }
+      footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 32px; border-top: 1px solid #bbb; background: #dedede; color: var(--ink); flex-wrap: wrap; }
+      .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-weight: 800; }
       @media (max-width: 940px) { .topbar { flex-wrap: wrap; justify-content: center; } }
-      @media (max-width: 560px) { .page { margin: 14px; } .topbar, .hero, .content, footer { padding-left: 18px; padding-right: 18px; } .form-panel { padding: 12px; } .google-form iframe { min-height: 1000px; } }
+      @media (max-width: 560px) { .page { margin: 0; } .topbar, .hero, .content, footer { padding-left: 18px; padding-right: 18px; } .topbar { gap: 14px; } .nav { justify-content: center; gap: 16px; } .brand-tagline { font-size: .62rem; } .form-panel { padding: 12px; } .google-form iframe { min-height: 1000px; } .hero { padding-top: 28px; } }
     </style>
   </head>
   <body>
     <div class="page">
       <header class="topbar">
-        <a class="brand" href="index.html" aria-label="PerfectGames home"><div class="logo-mark">PG</div><div class="brand-name">PerfectGames</div></a>
+        <a class="brand" href="index.html" aria-label="PerfectGames home"><div class="logo-mark">PG</div><div><div class="brand-name">Perfect Games :)</div><div class="brand-tagline">Bowling · Laser Tag · Arcade · Pizza · Sports Bar</div></div></a>
         <nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="ads.html">Ads</a><a href="form.html" aria-current="page">Form</a><a href="#">News</a><a href="#">Community</a></nav>
-        <a class="top-action" href="form.html">Book Now</a>
+        <a class="top-action" href="#booking-form">Fill Out Form to Get Started!</a>
       </header>
       <section class="hero" aria-label="Booking introduction">
-        <div class="eyebrow">Now Booking</div>
-        <h1>Book Your Visit</h1>
-        <p class="lead">Use the form below to send your booking request and plan your next PerfectGames experience.</p>
+        <div class="eyebrow">Birthday Parties · Group Events · Venue Rentals</div>
+        <h1>Book your kids birthday party, group and corporate events, or rent the venue!</h1>
+        <p class="lead">Ready to celebrate? Fill out the form below to get started planning your Perfect Games event.</p>
+        <div class="party-icons" aria-hidden="true">🎳　🎱　🎉　🎈　⭐</div>
       </section>
       <main class="content">
-        <div class="section-header"><h2>Booking Form</h2></div>
+        <div class="section-header" id="booking-form"><h2>Fill Out Form to Get Started!</h2></div>
         <section class="form-panel" aria-label="Google booking form">
           <div class="google-form">
             <!-- Replace the iframe src with the URL from Google Forms > Send > Embed HTML. -->
