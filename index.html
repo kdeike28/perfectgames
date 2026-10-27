@@ -98,11 +98,11 @@
       }
       .hero {
         display: grid;
-        grid-template-columns: 1.35fr 0.95fr;
+        grid-template-columns: 1fr;
         border-bottom: 3px solid var(--ink);
       }
       .hero-copy {
-        padding: 52px 42px 40px;
+        padding: 44px 42px 52px;
         background: linear-gradient(135deg, var(--accent-soft) 0%, #ffffff 100%);
       }
       .eyebrow {
@@ -152,29 +152,6 @@
       .button.secondary {
         background: transparent;
         color: var(--ink);
-      }
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(120px, 1fr));
-        gap: 18px;
-        max-width: 620px;
-      }
-      .stat {
-        padding: 18px 12px;
-        border: 3px solid var(--ink);
-        background: rgba(255,255,255,0.72);
-      }
-      .stat strong {
-        display: block;
-        font-size: clamp(1.5rem, 2.2vw, 2.4rem);
-        letter-spacing: -0.06em;
-      }
-      .stat span {
-        font-size: 0.8rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--muted);
       }
       .hero-visual {
         background: linear-gradient(180deg, #111111 0%, #2a2a2a 100%);
@@ -414,7 +391,6 @@
           padding-left: 18px;
           padding-right: 18px;
         }
-        .stats { grid-template-columns: 1fr; }
         .cta-row { flex-direction: column; }
         .button { width: 100%; }
       }
@@ -453,20 +429,6 @@
             <a class="button secondary" href="#">View Reviews</a>
           </div>
 
-          <div class="stats" aria-label="Company statistics">
-            <div class="stat">
-              <strong>120+</strong>
-              <span>Games</span>
-            </div>
-            <div class="stat">
-              <strong>4.9/5</strong>
-              <span>Rating</span>
-            </div>
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Access</span>
-            </div>
-          </div>
         </div>
 
         <div class="hero-visual" aria-label="Featured game panel">
