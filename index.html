@@ -5,58 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PerfectGames</title>
     <style>
-      :root {
-        --bg: #e7e7e7;
-        --panel: #ffffff;
-        --panel-soft: #f4f4f4;
-        --ink: #111111;
-        --muted: #4d4d4d;
-        --line: #d4d4d4;
-        --accent: #d71920;
-        --accent-dark: #a60d15;
-        --accent-soft: #f6dfe0;
-        --shadow: 0 18px 42px rgba(17, 17, 17, 0.08);
-      }
-
+      :root { --bg: #e7e7e7; --panel: #ffffff; --panel-soft: #f4f4f4; --ink: #111111; --muted: #4d4d4d; --line: #d4d4d4; --accent: #d71920; --accent-dark: #a60d15; --accent-soft: #f6dfe0; --shadow: 0 18px 42px rgba(17, 17, 17, 0.08); }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        background: linear-gradient(180deg, #dadada 0%, var(--bg) 100%);
-        color: var(--ink);
-        font-family: Arial, Helvetica, sans-serif;
-      }
+      body { margin: 0; min-height: 100vh; background: linear-gradient(180deg, #dadada 0%, var(--bg) 100%); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
       a { color: inherit; text-decoration: none; }
-      .page {
-        max-width: 1280px;
-        margin: 28px auto;
-        background: var(--panel);
-        border: 3px solid var(--ink);
-        box-shadow: var(--shadow);
-      }
-      .topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-        padding: 20px 32px;
-        border-bottom: 3px solid var(--ink);
-        background: #f7f7f7;
-      }
+      .page { max-width: 1280px; margin: 28px auto; background: var(--panel); border: 3px solid var(--ink); box-shadow: var(--shadow); }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 32px; border-bottom: 3px solid var(--ink); background: #f7f7f7; }
       .brand { display: flex; align-items: center; gap: 16px; }
-      .logo-mark {
-        width: 54px; height: 54px; display: grid; place-items: center;
-        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-        color: white; font-weight: 800; border: 3px solid var(--ink); border-radius: 12px;
-      }
+      .logo-mark { width: 54px; height: 54px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: white; font-weight: 800; border: 3px solid var(--ink); border-radius: 12px; }
       .brand-name { font-size: clamp(1.6rem, 2vw, 2.3rem); font-weight: 800; letter-spacing: -0.06em; }
       .nav { display: flex; align-items: center; gap: 28px; font-weight: 700; flex-wrap: wrap; }
       .nav a { position: relative; color: var(--ink); }
-      .nav a::after {
-        content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 3px;
-        background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease;
-      }
+      .nav a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
       .nav a:hover::after { transform: scaleX(1); }
       .top-action { padding: 12px 18px; border: 3px solid var(--ink); background: var(--ink); color: white; font-weight: 700; }
       .hero { display: grid; grid-template-columns: 1fr; border-bottom: 3px solid var(--ink); }
@@ -109,78 +70,32 @@
       .newsletter button { width: 100%; padding: 12px 16px; border: 3px solid var(--ink); background: var(--accent); color: white; font-weight: 800; cursor: pointer; }
       footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 32px; border-top: 3px solid var(--ink); background: #111; color: white; flex-wrap: wrap; }
       .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-weight: 700; }
-      @media (max-width: 940px) {
-        .hero, .main-grid, .feature-strip, .cards { grid-template-columns: 1fr; }
-        .hero-visual { border-left: none; border-top: 3px solid var(--ink); }
-        .content-column { border-right: none; border-bottom: 3px solid var(--ink); }
-        .topbar { flex-wrap: wrap; justify-content: center; }
-      }
-      @media (max-width: 560px) {
-        .page { margin: 14px; }
-        .topbar, .hero-copy, .content-column, .sidebar, footer { padding-left: 18px; padding-right: 18px; }
-        .cta-row { flex-direction: column; }
-        .button { width: 100%; }
-      }
+      @media (max-width: 940px) { .hero, .main-grid, .feature-strip, .cards { grid-template-columns: 1fr; } .hero-visual { border-left: none; border-top: 3px solid var(--ink); } .content-column { border-right: none; border-bottom: 3px solid var(--ink); } .topbar { flex-wrap: wrap; justify-content: center; } }
+      @media (max-width: 560px) { .page { margin: 14px; } .topbar, .hero-copy, .content-column, .sidebar, footer { padding-left: 18px; padding-right: 18px; } .cta-row { flex-direction: column; } .button { width: 100%; } }
     </style>
   </head>
   <body>
     <div class="page">
       <header class="topbar">
-        <div class="brand">
-          <div class="logo-mark">PG</div>
-          <div class="brand-name">PerfectGames</div>
-        </div>
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#">Home</a>
-          <a href="ads.html">Ads</a>
-          <a href="#">Reviews</a>
-          <a href="#">News</a>
-          <a href="#">Community</a>
-        </nav>
-        <a class="top-action" href="forms.html">Book Now</a>
+        <div class="brand"><div class="logo-mark">PG</div><div class="brand-name">PerfectGames</div></div>
+        <nav class="nav" aria-label="Main navigation"><a href="#">Home</a><a href="ads.html">Ads</a><a href="#">Reviews</a><a href="#">News</a><a href="#">Community</a></nav>
+        <a class="top-action" href="form.html">Book Now</a>
       </header>
       <section class="hero" aria-label="PerfectGames landing section">
-        <div class="hero-copy">
-          <div class="eyebrow">Now Booking</div>
-          <h1>Executive Summary</h1>
-          <p class="lead">Discover the best arcade, lounge, and competitive gaming experiences in one place. Book your spot, explore new releases, and stay ahead of the scene.</p>
-          <div class="cta-row">
-            <a class="button primary" href="#">Explore Games</a>
-            <a class="button secondary" href="#">View Reviews</a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-label="Featured game panel">
-          <div class="game-panel"><div class="game-card">
-            <div class="mini-header"><span>Featured</span><span>New drop</span></div>
-            <div class="cover">Nightfall</div>
-            <div class="game-meta"><span>Arcade thrill</span><span class="badge">4 players</span></div>
-          </div></div>
-        </div>
+        <div class="hero-copy"><div class="eyebrow">Now Booking</div><h1>Executive Summary</h1><p class="lead">Discover the best arcade, lounge, and competitive gaming experiences in one place. Book your spot, explore new releases, and stay ahead of the scene.</p><div class="cta-row"><a class="button primary" href="#">Explore Games</a><a class="button secondary" href="#">View Reviews</a></div></div>
+        <div class="hero-visual" aria-label="Featured game panel"><div class="game-panel"><div class="game-card"><div class="mini-header"><span>Featured</span><span>New drop</span></div><div class="cover">Nightfall</div><div class="game-meta"><span>Arcade thrill</span><span class="badge">4 players</span></div></div></div></div>
       </section>
-      <section class="feature-strip" aria-label="Key features">
-        <article class="feature"><h3>Premium Setup</h3><p>High-performance PCs, immersive displays, and premium seating for every session.</p></article>
-        <article class="feature"><h3>Live Events</h3><p>Join tournaments, launch nights, and exclusive community events every week.</p></article>
-        <article class="feature"><h3>Fast Access</h3><p>Reserve your favorite games and skip the wait with simple online bookings.</p></article>
-      </section>
+      <section class="feature-strip" aria-label="Key features"><article class="feature"><h3>Premium Setup</h3><p>High-performance PCs, immersive displays, and premium seating for every session.</p></article><article class="feature"><h3>Live Events</h3><p>Join tournaments, launch nights, and exclusive community events every week.</p></article><article class="feature"><h3>Fast Access</h3><p>Reserve your favorite games and skip the wait with simple online bookings.</p></article></section>
       <main class="main-grid">
-        <section class="content-column">
-          <div class="section-header"><h2>Featured titles</h2><a href="#">See all</a></div>
-          <div class="cards">
-            <article class="game-item"><div class="thumb one"></div><div class="game-info"><h3>Velocity</h3><p>Fast-paced racing action with precision controls and bold arena energy.</p><div class="meta-row"><span>Racing</span><span class="pill">Top</span></div></div></article>
-            <article class="game-item"><div class="thumb two"></div><div class="game-info"><h3>Steel Run</h3><p>A tactical combat challenge built for strategy-focused players and teams.</p><div class="meta-row"><span>Action</span><span class="pill">Hot</span></div></div></article>
-            <article class="game-item"><div class="thumb three"></div><div class="game-info"><h3>Nova Drift</h3><p>Explore a neon-lit universe filled with intensity, upgrades, and momentum.</p><div class="meta-row"><span>Adventure</span><span class="pill">New</span></div></div></article>
-            <article class="game-item"><div class="thumb four"></div><div class="game-info"><h3>Backroom</h3><p>Sneak, survive, and outsmart your rivals in one of the most tense titles around.</p><div class="meta-row"><span>Survival</span><span class="pill">Live</span></div></div></article>
-          </div>
-        </section>
-        <aside class="sidebar">
-          <div class="side-card"><h3>Trending</h3><ul class="trend-list"><li><span>Co-op nights</span><span>18</span></li><li><span>Esports week</span><span>12</span></li><li><span>Retro nights</span><span>9</span></li></ul></div>
-          <div class="side-card"><h3>Newsletter</h3><div class="newsletter"><input type="email" placeholder="Email address" aria-label="Email address" /><button type="button">Join now</button></div></div>
-        </aside>
+        <section class="content-column"><div class="section-header"><h2>Featured titles</h2><a href="#">See all</a></div><div class="cards">
+          <article class="game-item"><div class="thumb one"></div><div class="game-info"><h3>Velocity</h3><p>Fast-paced racing action with precision controls and bold arena energy.</p><div class="meta-row"><span>Racing</span><span class="pill">Top</span></div></div></article>
+          <article class="game-item"><div class="thumb two"></div><div class="game-info"><h3>Steel Run</h3><p>A tactical combat challenge built for strategy-focused players and teams.</p><div class="meta-row"><span>Action</span><span class="pill">Hot</span></div></div></article>
+          <article class="game-item"><div class="thumb three"></div><div class="game-info"><h3>Nova Drift</h3><p>Explore a neon-lit universe filled with intensity, upgrades, and momentum.</p><div class="meta-row"><span>Adventure</span><span class="pill">New</span></div></div></article>
+          <article class="game-item"><div class="thumb four"></div><div class="game-info"><h3>Backroom</h3><p>Sneak, survive, and outsmart your rivals in one of the most tense titles around.</p><div class="meta-row"><span>Survival</span><span class="pill">Live</span></div></div></article>
+        </div></section>
+        <aside class="sidebar"><div class="side-card"><h3>Trending</h3><ul class="trend-list"><li><span>Co-op nights</span><span>18</span></li><li><span>Esports week</span><span>12</span></li><li><span>Retro nights</span><span>9</span></li></ul></div><div class="side-card"><h3>Newsletter</h3><div class="newsletter"><input type="email" placeholder="Email address" aria-label="Email address" /><button type="button">Join now</button></div></div></aside>
       </main>
-      <footer>
-        <div class="brand"><div class="logo-mark">PG</div><div class="brand-name">PerfectGames</div></div>
-        <div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Support</a></div>
-      </footer>
+      <footer><div class="brand"><div class="logo-mark">PG</div><div class="brand-name">PerfectGames</div></div><div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Support</a></div></footer>
     </div>
   </body>
 </html>
