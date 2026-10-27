@@ -3,73 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form | PerfectGames</title>
+    <title>Book Your Visit | Perfect Games</title>
     <style>
-      :root { --bg: #dedede; --panel: #ffffff; --ink: #111111; --muted: #444444; --line: #c8c8c8; --accent: #ef171c; --accent-dark: #b90910; --accent-soft: #eeeeee; --shadow: 0 14px 34px rgba(17, 17, 17, 0.10); }
+      :root { --bg: #f3f3f3; --panel: #fff; --ink: #171717; --muted: #555; --line: #d2d2d2; --red: #ed171d; --red-dark: #bd1016; }
       * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body { margin: 0; min-height: 100vh; background: linear-gradient(180deg, #dadada 0%, var(--bg) 100%); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+      body { margin: 0; color: var(--ink); background: var(--bg); font-family: Arial, Helvetica, sans-serif; }
       a { color: inherit; text-decoration: none; }
-      .page { max-width: 1280px; margin: 24px auto; background: var(--panel); border: 0; box-shadow: var(--shadow); }
-      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 30px; border-bottom: 1px solid #c5c5c5; background: #dedede; }
-      .brand { display: flex; align-items: center; gap: 16px; }
-      .logo-mark { width: 48px; height: 48px; display: grid; place-items: center; background: #eeeeee; color: var(--accent); font-weight: 900; border: 2px solid #777; border-radius: 4px; }
-      .brand-name { font-size: clamp(1.6rem, 2vw, 2.3rem); font-weight: 900; font-style: italic; color: var(--accent); letter-spacing: -0.06em; text-shadow: 1px 1px 0 #fff; }
-      .brand-tagline { margin-top: -2px; font-size: .7rem; font-weight: 800; font-style: italic; color: #222; white-space: nowrap; }
-      .party-icons { margin-top: 18px; font-size: clamp(1.4rem, 3vw, 2.2rem); letter-spacing: .08em; }
-      .nav { display: flex; align-items: center; gap: 24px; font-weight: 800; flex-wrap: wrap; }
-      .nav a { position: relative; color: var(--ink); }
-      .nav a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 100%; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
-      .nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); }
-      .top-action { padding: 12px 20px; border: 2px solid var(--accent); border-radius: 999px; background: var(--accent); color: white; font-weight: 900; text-transform: uppercase; font-size: .82rem; }
-      .hero { border-bottom: 1px solid #c8c8c8; background: #dedede; padding: 36px 42px 40px; position: relative; overflow: hidden; }
-      .eyebrow { display: inline-block; margin-bottom: 14px; padding: 8px 13px; background: var(--accent); color: white; border-radius: 999px; font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 900; }
-      h1 { margin: 0 0 18px; font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: 0.98; letter-spacing: -0.065em; font-weight: 900; }
-      .lead { max-width: 700px; margin: 0; color: var(--muted); font-size: 1.18rem; line-height: 1.55; }
-      .content { padding: 38px 32px 42px; }
-      .section-header { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
-      .section-header h2 { margin: 0; font-size: clamp(2rem, 2.6vw, 3rem); letter-spacing: -0.06em; }
-      .form-panel { border: 1px solid #d0d0d0; background: #f3f3f3; padding: 22px; }
-      .google-form { margin: 0; }
-      .google-form iframe { display: block; width: 100%; min-height: 900px; border: 1px solid #c9c9c9; background: #fff; }
-      .embed-help { padding: 22px; border: 1px dashed #aaa; background: #fff; }
-      .embed-help h3 { margin: 0 0 10px; font-size: 1.4rem; letter-spacing: -0.04em; }
-      .embed-help p { color: var(--muted); line-height: 1.55; }
-      .embed-help code { overflow-wrap: anywhere; background: #f0f0f0; padding: 2px 5px; }
-      .open-form { display: inline-block; margin-top: 10px; padding: 12px 22px; background: var(--accent); border: 2px solid var(--accent); border-radius: 999px; color: white; font-weight: 900; text-transform: uppercase; text-decoration: none; }
-      footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 32px; border-top: 1px solid #bbb; background: #dedede; color: var(--ink); flex-wrap: wrap; }
-      .footer-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-weight: 800; }
-      @media (max-width: 940px) { .topbar { flex-wrap: wrap; justify-content: center; } }
-      @media (max-width: 560px) { .page { margin: 0; } .topbar, .hero, .content, footer { padding-left: 18px; padding-right: 18px; } .topbar { gap: 14px; } .nav { justify-content: center; gap: 16px; } .brand-tagline { font-size: .62rem; } .form-panel { padding: 12px; } .google-form iframe { min-height: 1000px; } .hero { padding-top: 28px; } }
+      .page { max-width: 1280px; margin: 0 auto; background: var(--panel); min-height: 100vh; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 32px; background: #dedede; border-bottom: 2px solid #bcbcbc; }
+      .brand { display: flex; align-items: center; gap: 12px; }
+      .logo-mark { width: 46px; height: 46px; display: grid; place-items: center; border: 2px solid #222; border-radius: 50%; color: white; background: var(--red); font-weight: 900; }
+      .brand-name { font-size: clamp(1.45rem, 2.3vw, 2rem); font-weight: 900; font-style: italic; letter-spacing: -.06em; color: var(--red); text-shadow: 1px 1px white; }
+      .brand-tagline { margin-top: 1px; font-size: .68rem; font-weight: 800; font-style: italic; white-space: nowrap; }
+      .nav { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; font-weight: 800; }
+      .nav a { padding: 9px 12px; border-radius: 999px; }
+      .nav a[aria-current="page"] { background: var(--red); color: white; }
+      .top-action, .submit { display: inline-block; border: 0; border-radius: 999px; background: var(--red); color: white; font-weight: 900; padding: 13px 22px; cursor: pointer; }
+      .top-action:hover, .submit:hover { background: var(--red-dark); }
+      .hero { position: relative; padding: 42px 28px 30px; text-align: center; overflow: hidden; background: linear-gradient(180deg, #fff, #fafafa); }
+      .hero h1 { margin: 0 0 12px; font-size: clamp(2.5rem, 5vw, 4.6rem); font-weight: 900; font-style: italic; letter-spacing: -.065em; }
+      .hero p { max-width: 700px; margin: 0 auto; color: var(--muted); font-size: 1.15rem; line-height: 1.55; }
+      .decor { position: absolute; font-size: clamp(2rem, 5vw, 4rem); opacity: .85; }
+      .decor.left { left: 5%; top: 38%; transform: rotate(-12deg); }
+      .decor.right { right: 5%; top: 20%; transform: rotate(10deg); }
+      .booking-area { padding: 16px 24px 42px; }
+      .form-panel { max-width: 900px; margin: 0 auto; padding: clamp(22px, 4vw, 38px); border: 2px solid #b9b9b9; border-radius: 18px; background: linear-gradient(135deg, #ededed, #f8f8f8); box-shadow: 0 8px 22px rgba(0,0,0,.06); }
+      .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 26px; }
+      .field { display: grid; gap: 9px; }
+      .field.full { grid-column: 1 / -1; }
+      label { font-weight: 800; }
+      input, select, textarea { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #aaa; border-radius: 7px; background: white; color: var(--ink); font: inherit; }
+      input:focus, select:focus, textarea:focus { outline: 3px solid rgba(237,23,29,.18); border-color: var(--red); }
+      .submit-row { display: flex; justify-content: center; padding-top: 26px; }
+      .submit { min-width: 190px; font-size: 1rem; }
+      .note { text-align: center; margin: 22px 0 0; color: var(--muted); font-weight: 700; }
+      footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 32px; background: #dedede; border-top: 2px solid #bcbcbc; flex-wrap: wrap; }
+      .footer-links { display: flex; gap: 18px; flex-wrap: wrap; font-weight: 700; }
+      @media (max-width: 850px) { .topbar { flex-wrap: wrap; justify-content: center; } .decor { opacity: .3; } }
+      @media (max-width: 560px) { .topbar { padding: 16px; } .nav { gap: 5px; } .nav a { padding: 8px; } .brand-tagline { white-space: normal; } .fields { grid-template-columns: 1fr; gap: 18px; } .field.full { grid-column: auto; } .booking-area { padding: 8px 14px 28px; } .hero { padding-top: 34px; } footer { padding: 20px; } }
     </style>
   </head>
   <body>
     <div class="page">
       <header class="topbar">
-        <a class="brand" href="index.html" aria-label="PerfectGames home"><div class="logo-mark">PG</div><div><div class="brand-name">Perfect Games :)</div><div class="brand-tagline">Bowling · Laser Tag · Arcade · Pizza · Sports Bar</div></div></a>
+        <a class="brand" href="index.html" aria-label="Perfect Games home"><div class="logo-mark">PG</div><div><div class="brand-name">Perfect Games :)</div><div class="brand-tagline">Bowling · Laser Tag · Arcade · Pizza · Sports Bar</div></div></a>
         <nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="ads.html">Ads</a><a href="form.html" aria-current="page">Form</a><a href="#">News</a><a href="#">Community</a></nav>
-        <a class="top-action" href="#booking-form">Fill Out Form to Get Started!</a>
+        <a class="top-action" href="#booking-form">Book Now</a>
       </header>
       <section class="hero" aria-label="Booking introduction">
-        <div class="eyebrow">Birthday Parties · Group Events · Venue Rentals</div>
-        <h1>Book your kids birthday party, group and corporate events, or rent the venue!</h1>
-        <p class="lead">Ready to celebrate? Fill out the form below to get started planning your Perfect Games event.</p>
-        <div class="party-icons" aria-hidden="true">🎳　🎱　🎉　🎈　⭐</div>
+        <span class="decor left" aria-hidden="true">🎳 🎱</span>
+        <span class="decor right" aria-hidden="true">🕹️ ✨</span>
+        <h1>Book Your Visit</h1>
+        <p>Fill out the form below to reserve your spot for an unforgettable time at Perfect Games!</p>
       </section>
-      <main class="content">
-        <div class="section-header" id="booking-form"><h2>Fill Out Form to Get Started!</h2></div>
-        <section class="form-panel" aria-label="Google booking form">
-          <div class="google-form">
-            <!-- Replace the iframe src with the URL from Google Forms > Send > Embed HTML. -->
-            <div class="embed-help">
-              <h3>Your Google Form will appear here</h3>
-              <p>To embed your form, open it in Google Forms, select <strong>Send</strong>, choose the <strong>Embed HTML</strong> option, and copy the URL inside the iframe's <code>src</code> attribute. Replace <code>about:blank</code> in the iframe below with that URL. It usually ends with <code>/viewform?embedded=true</code>.</p>
-            </div>
-            <iframe src="about:blank" title="Google Forms booking form" loading="lazy" aria-label="Google Forms booking form"></iframe>
+      <main class="booking-area" id="booking-form">
+        <form class="form-panel" onsubmit="event.preventDefault(); alert('Thanks for your interest in Perfect Games! This sample form is not connected to a booking system yet. Please contact Perfect Games directly to confirm your reservation.');">
+          <div class="fields">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required /></div>
+            <div class="field"><label for="date">Preferred Date</label><input id="date" name="date" type="date" required /></div>
+            <div class="field"><label for="time">Preferred Time</label><select id="time" name="time" required><option value="">Select a time</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option></select></div>
+            <div class="field full"><label for="guests">Number of Guests</label><select id="guests" name="guests" required><option value="">Select number of guests</option><option>1–5 guests</option><option>6–10 guests</option><option>11–15 guests</option><option>16–20 guests</option><option>21–30 guests</option><option>31+ guests</option></select></div>
+            <div class="field full"><label for="event">Event Type (optional)</label><select id="event" name="event"><option value="">Choose an event type</option><option>Birthday Party</option><option>Group Event</option><option>Corporate Event</option><option>Venue Rental</option><option>Just Visiting</option></select></div>
+            <div class="field full"><label for="details">Additional Details (optional)</label><textarea id="details" name="details" rows="3" placeholder="Tell us a little about your plans"></textarea></div>
           </div>
-        </section>
+          <div class="submit-row"><button class="submit" type="submit">Submit</button></div>
+        </form>
+        <p class="note">⭐ We can’t wait to have you! ⭐</p>
       </main>
-      <footer><a class="brand" href="index.html" aria-label="PerfectGames home"><div class="logo-mark">PG</div><div class="brand-name">PerfectGames</div></a><div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Support</a></div></footer>
+      <footer><a class="brand" href="index.html" aria-label="Perfect Games home"><div class="logo-mark">PG</div><div><div class="brand-name">Perfect Games :)</div><div class="brand-tagline">Bowling · Laser Tag · Arcade · Pizza · Sports Bar</div></div></a><div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Support</a></div></footer>
     </div>
   </body>
 </html>
