@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Marketing | Perfect Games</title>
+<style>
+:root{--red:#d71920;--dark:#111;--ink:#202020;--muted:#626262;--paper:#fff;--soft:#f4f4f4;--line:#d7d7d7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e7e7e7;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit}.page{max-width:1180px;margin:28px auto;background:#fff;border:3px solid var(--dark);box-shadow:0 18px 42px #00000012}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 30px;border-bottom:3px solid var(--dark);background:#f7f7f7;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;font-size:1.8rem;font-weight:800;letter-spacing:-.06em}.logo{display:grid;place-items:center;width:48px;height:48px;background:var(--red);color:white;border:3px solid var(--dark);border-radius:10px;font-size:1rem;letter-spacing:0}
+nav{display:flex;gap:24px;flex-wrap:wrap;font-weight:700}nav a{text-decoration:none}nav a:hover{color:var(--red)}.top-action,.btn{display:inline-block;padding:11px 18px;background:var(--red);border:2px solid var(--dark);color:white;text-decoration:none;font-weight:800}
+.hero{padding:44px 34px;background:linear-gradient(120deg,#f8dfe0,#fff);border-bottom:3px solid var(--dark)}.eyebrow{display:inline-block;background:var(--dark);color:white;padding:5px 10px;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;letter-spacing:-.07em;margin:16px 0}.hero p{max-width:720px;color:var(--muted);font-size:1.1rem;margin:0}
+section.content{padding:38px 34px;border-bottom:3px solid var(--dark)}.section-heading{margin:0 0 8px;font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.06em}.intro{margin:0 0 24px;color:var(--muted)}
+.signup{max-width:760px;margin:auto;padding:28px;border:3px solid var(--dark);background:#fafafa}.signup h3{text-align:center;color:var(--red);font-size:1.8rem;margin:0 0 6px}.signup .sub{text-align:center;margin:0 auto 22px;max-width:580px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}label{font-weight:700;font-size:.92rem}input,select{width:100%;padding:13px;border:2px solid #333;background:white;font:inherit;border-radius:0}.fine{font-size:.83rem;color:var(--muted);margin:15px 0}.signup button{width:100%;padding:14px;border:2px solid var(--dark);background:var(--red);color:white;font-weight:800;font-size:1rem;cursor:pointer}.note{font-size:.8rem;color:#555;margin:12px 0 0}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.group{border:3px solid var(--dark);background:#fafafa;padding:20px}.group .number{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--red);color:white;font-weight:800}.group h3{font-size:1.35rem;line-height:1.15;margin:12px 0}.group p{margin:10px 0;color:#444}.group strong{color:#111}
+.email-shell{max-width:760px;margin:24px auto 0;border:2px solid #bdbdbd;background:#fff;box-shadow:0 8px 24px #00000012}.mail-top{padding:16px 20px;background:#f1f1f1;border-bottom:1px solid #ccc}.mail-top p{margin:4px 0;font-size:.9rem}.mail-body{padding:24px}.mail-brand{background:var(--red);color:white;text-align:center;padding:20px;border:3px solid var(--dark)}.mail-brand strong{font-size:2rem;letter-spacing:-.06em}.mail-brand small{display:block;letter-spacing:.12em;font-weight:700}.mail-body h3{text-align:center;font-size:1.8rem;line-height:1.1;margin:25px 0 16px}.mail-body p{line-height:1.65}.mail-cta{display:block;width:max-content;max-width:100%;margin:22px auto;padding:13px 22px;background:var(--red);color:white;text-decoration:none;font-weight:800;border:2px solid var(--dark)}.mail-footer{background:#171717;color:white;text-align:center;padding:22px 18px;font-size:.88rem}.mail-footer p{margin:7px 0}.mail-footer a{color:white;text-decoration:underline;margin:0 7px}.social{font-weight:700;color:#fff}
+footer{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap;padding:22px 30px;background:#111;color:white}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:white}
+@media(max-width:800px){.groups{grid-template-columns:1fr}.topbar{justify-content:center}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}}
+@media(max-width:560px){.page{margin:10px}.topbar,section.content,.hero,footer{padding-left:18px;padding-right:18px}.signup{padding:18px}.mail-body{padding:16px}nav{justify-content:center;gap:14px}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+  <a class="brand" href="index.html" style="text-decoration:none"><span class="logo">PG</span><span>PerfectGames</span></a>
+  <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="ads.html">Ads</a><a href="form.html">Form</a><a href="email.html">Email</a></nav>
+  <a class="top-action" href="form.html">Book Now</a>
+</header>
+<div class="hero">
+  <span class="eyebrow">Stay in the game</span>
+  <h1>Good Times.<br>Great Updates.</h1>
+  <p>Get the latest Perfect Games offers, party inspiration, and event news delivered straight to your inbox. Sign up and make your next visit even better.</p>
+</div>
+<main>
+<section class="content" id="signup">
+  <h2 class="section-heading">Get More Fun in Your Inbox</h2>
+  <p class="intro">Sign up for Perfect Games emails and receive 10% off your next party booking. Just a few details and you're in!</p>
+  <form class="signup" id="emailSignup">
+    <h3>Join the Perfect Games List</h3>
+    <p class="sub">Get a welcome offer, plus updates about parties, group events, and special promotions.</p>
+    <div class="fields">
+      <div class="field"><label for="firstName">First Name <span style="font-weight:400">(Optional)</span></label><input id="firstName" name="firstName" autocomplete="given-name" placeholder="Your first name"></div>
+      <div class="field"><label for="email">Email Address <span style="color:#d71920">(Required)</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <div class="field full"><label for="interest">What are you most interested in? <span style="font-weight:400">(Optional)</span></label><select id="interest" name="interest"><option value="">Choose an option</option><option>Birthday parties</option><option>Group events</option><option>Student deals</option><option>General visits and promotions</option></select></div>
+    </div>
+    <p class="fine">By signing up, you'll receive about two emails per month with party ideas, event news, and special offers. We will never sell or share your email for another company's marketing. After submitting, check your inbox for a confirmation email to verify your subscription (double opt-in).</p>
+    <button type="submit">Send Me the 10% Offer</button>
+    <p class="note">Demo form for the class website: connect this form to an approved email marketing platform and enable confirmation emails before collecting real subscribers.</p>
+    <p id="formMessage" class="note" role="status" aria-live="polite"></p>
+  </form>
+</section>
+<section class="content" id="strategy">
+  <h2 class="section-heading">How We Build Our Email Community</h2>
+  <p class="intro">Perfect Games will grow its list through permission-based sign-ups that offer customers a clear reason to subscribe.</p>
+  <div class="groups">
+    <article class="group"><span class="number">01</span><h3>Families &amp; Parents</h3><p><strong>Where/how:</strong> Invite parents to sign up during birthday-party inquiries and checkout. Place QR-code signs at the venue and promote the sign-up through family-focused social posts.</p><p><strong>Immediate value:</strong> A 10% discount on their next party booking.</p><p><strong>Long-term value:</strong> Birthday inspiration, family promotions, seasonal events, and early notice of special offers.</p></article>
+    <article class="group"><span class="number">02</span><h3>College Students</h3><p><strong>Where/how:</strong> Share a sign-up QR code through campus flyers, student organization partnerships, and Perfect Games social media posts aimed at local students.</p><p><strong>Immediate value:</strong> A digital coupon for a future visit or student deal.</p><p><strong>Long-term value:</strong> Student specials, group-night offers, tournament announcements, and affordable entertainment ideas.</p></article>
+    <article class="group"><span class="number">03</span><h3>Businesses &amp; Organizations</h3><p><strong>Where/how:</strong> Add an optional email opt-in to the group-event inquiry form and promote event information through business outreach and LinkedIn.</p><p><strong>Immediate value:</strong> A group-event planning guide and information about current booking offers.</p><p><strong>Long-term value:</strong> Corporate event packages, team-building ideas, seasonal booking reminders, and group promotions.</p></article>
+  </div>
+</section>
+<section class="content" id="preview">
+  <h2 class="section-heading">A Look Inside Your Inbox</h2>
+  <p class="intro">Example commercial email sent to the full subscriber list a few months after sign-up.</p>
+  <div class="email-shell">
+    <div class="mail-top"><strong>Inbox · Message Preview</strong><p><strong>From:</strong> Perfect Games &lt;updates@perfectgamesinc.com&gt;</p><p><strong>Subject:</strong> Make Your Next Event Unforgettable</p><p><strong>To:</strong> [Subscriber Email]</p></div>
+    <div class="mail-body">
+      <div class="mail-brand"><strong>PERFECT GAMES</strong><small>PLAY. CELEBRATE. HAVE FUN.</small></div>
+      <h3>Your Next Great Event Starts Here!</h3>
+      <p>Hi [First Name],</p>
+      <p>Looking for a fun way to celebrate a birthday, get together with friends, or plan your next group event?</p>
+      <p>Perfect Games brings people together for exciting games, great entertainment, and memorable experiences. Whether you're planning a celebration with family or organizing an outing with friends or coworkers, we're ready to help make it a great time.</p>
+      <p>Start planning today. Tell us a little about your event and our team can help you take the next step.</p>
+      <a class="mail-cta" href="form.html">PLAN YOUR EVENT</a>
+      <p style="text-align:center;font-size:.82rem;color:#666">Button destination: Perfect Games event inquiry / booking form (form.html).</p>
+    </div>
+    <div class="mail-footer">
+      <div class="social">PERFECT GAMES · PLAY. CELEBRATE. HAVE FUN.</div>
+      <p>[Insert verified business street address]</p>
+      <p>Customer support: [Insert verified support email or phone]</p>
+      <p><a href="#" aria-label="Facebook">Facebook</a> · <a href="#" aria-label="Instagram">Instagram</a></p>
+      <p><a href="#">Privacy Policy</a> · <a href="mailto:?subject=Check%20out%20Perfect%20Games">Forward to a Friend</a> · <a href="mailto:unsubscribe@perfectgamesinc.com?subject=Unsubscribe">Unsubscribe</a></p>
+      <p style="font-size:.75rem;color:#ccc">You are receiving this email because you chose to subscribe to Perfect Games updates.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="brand"><span class="logo">PG</span><span>PerfectGames</span></div><div class="footer-links"><a href="index.html">Home</a><a href="ads.html">Ad Designs</a><a href="form.html">Event Form</a><a href="#signup">Email Sign-Up</a></div></footer>
+</div>
+<script>
+document.getElementById('emailSignup').addEventListener('submit',function(event){
+  event.preventDefault();
+  document.getElementById('formMessage').textContent='Thanks! This is a design preview. Connect the form to Perfect Games’ email marketing platform to securely save sign-ups and send double opt-in confirmations.';
+});
+</script>
+</body>
+</html>
